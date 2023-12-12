@@ -1,16 +1,23 @@
 body {
     font-family: 'Rubik', sans-serif;
+    background-color: #291720;
 }
 
-h1 {
+header {
+    margin-top: 5vh;
+}
+
+#drink-random {
     font-family:'Silkscreen', sans-serif;
     color:#820263;
     text-align: center;
+    font-size: 40px;
 }
 
-h3 {
+h1 {
     color:#FB8B24;
     text-align: center;
+    font-size: 30px;
 }
 
 p {
@@ -42,6 +49,16 @@ p {
     align-items: center;
 }
 
-.coffee-cup {
+#coffee-cup {
     width: 40vh;
 }
+
+.reset-button {
+    display: flex;
+    margin: auto;
+}
+
+.main-body {
+    margin: 1vw;
+}
+

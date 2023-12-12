@@ -24,52 +24,59 @@
 <body>
     <!--Title of game-->
     <header>
-        <div><h3>Make a...</h3>
+        <div><h1>Make a...</h1>
+        </div>
+
+        <div id="drink-random">
             <!--script for randomized drink name-->
-            <h1>Cappuccino</h1>
+            
         </div>
 
     </header>
     <!--Game area-->
-    <div class="row">
+    <div class="row main-body">
         
         <div class="col-lg-5" id="ingredients_drawer">
             <p>Tap the correct ingredients to make your drink</p>
             <div class="row">
                 <div class="col-lg-4 drawer-layout">
-                    <img src="assets/images/americano.png" class="mx-auto d-block"
+                    <img id="espresso-ingredient" src="assets/images/single_espresso.png" class="mx-auto d-block"
                     alt="#">
                 </div>
                 <div class="col-lg-4 drawer-layout">
-                    <img src="assets/images/chocolate.png" class="mx-auto d-block"
+                    <img id="chocolate-ingredient" src="assets/images/chocolate.png" class="mx-auto d-block"
                     alt="#">
                 </div>    
+                <div class="col-lg-4 drawer-layout">
+                    <img id="milk-ingredient" src="assets/images/latte.png" class="mx-auto d-block"
+                    alt="#">
+                </div>
+                <div class="col-lg-4 drawer-layout">
+                    <img id="double-espresso-ingredient" src="assets/images/double_espresso.png" class="mx-auto d-block"
+                    alt="#">
+                </div>
+                <div class="col-lg-4 drawer-layout">
+                    <img id="water-ingredient" src="assets/images/empty_cup.png" class="mx-auto d-block"
+                    alt="#">
+                </div>
                 <div class="col-lg-4 drawer-layout">
                     <img src="assets/images/cut_out_cup.png" class="mx-auto d-block"
                     alt="#">
                 </div>
-                <div class="col-lg-4 drawer-layout">
-                    <img src="assets/images/double_espresso.png" class="mx-auto d-block"
-                    alt="#">
-                </div>
-                <div class="col-lg-4 drawer-layout">
-                    <img src="assets/images/empty_cup.png" class="mx-auto d-block"
-                    alt="#">
-                </div>
-                <div class="col-lg-4 drawer-layout">
-                    <img src="assets/images/latte.png" class="mx-auto d-block"
-                    alt="#">
+                <div>
+                    <button id="reset-button">Reset game</button>
                 </div>
 
             </div>
         </div>
         
         <div class="col-lg-2"><!--Nice to have - score and timer --></div>
+
         <div id="coffee-cup-container" class="col-lg-5">
-            <img src="assets/images/latte.png" class="mx-auto d-block coffee-cup" alt="#">
+            <img id="coffee-cup" src="assets/images/empty_cup.png" class="mx-auto d-block" alt="#">
         </div>
-        
     </div>
+    
 
     <!--Get in touch section nice to have
         
@@ -82,6 +89,7 @@
         
     </div>
     -->
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/js/script-game.js"></script>
 </body>
 </html>
