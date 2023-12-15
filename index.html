@@ -24,46 +24,56 @@
 <body>
     <!--Title of game-->
     <header>
-        <div><h1>Make a...</h1>
-        </div>
-
-        <div id="drink-random">
-            <!--script for randomized drink name-->
-            
-        </div>
-
+        <h1>COFFEE CRAM</h1>
     </header>
+    
+    <div><h2>Make a...</h2>
+    </div>
+
+    <div id="drink-random">
+        <!--script for randomized drink name-->
+        
+    </div>
+    
     <!--Game area-->
-    <div class="row main-body wrapper">
+
+    <div class="container-fluid max-width">
+        <div class="row main-body wrapper">
         
         <div class="col-lg-5 col-md-12 col-sm-12" id="ingredients_drawer">
             <p>Tap the correct ingredients to make your drink</p>
             <div class="row">
                 <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
-                    <img id="espresso-ingredient" src="assets/images/single_espresso.png" class="mx-auto d-block"
+                    <img src="assets/images/espresso.png" class="mx-auto d-block drawer-image"
                     alt="#">
+                    <div id="espresso-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text">Espresso</p></div>
                 </div>
                 <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
-                    <img id="chocolate-ingredient" src="assets/images/chocolate.png" class="mx-auto d-block"
+                    <img src="assets/images/chocolate.png" class="mx-auto d-block drawer-image"
                     alt="#">
+                    <div id="chocolate-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text">Chocolate</p></div>
                 </div>    
                 <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
-                    <img id="milk-ingredient" src="assets/images/latte.png" class="mx-auto d-block"
+                    <img src="assets/images/steamed-milk.png" class="mx-auto d-block drawer-image"
                     alt="#">
+                    <div id="milk-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text-dark">Steamed Milk</p></div>
                 </div>
                 <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
-                    <img id="double-espresso-ingredient" src="assets/images/double_espresso.png" class="mx-auto d-block"
+                    <img src="assets/images/double-espresso.png" class="mx-auto d-block drawer-image"
                     alt="#">
+                    <div id="double-espresso-ingredient" onclick="ingredientClicked(event.currentTarget)"class="overlay"><p class="image-text">Double Espresso</p></div>
                 </div>
                 <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
-                    <img id="water-ingredient" src="assets/images/empty_cup.png" class="mx-auto d-block"
+                    <img src="assets/images/water.png" class="mx-auto d-block drawer-image"
                     alt="#">
+                    <div id="water-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text">Water</p></div>
                 </div>
                 <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
-                    <img src="assets/images/cut_out_cup.png" class="mx-auto d-block"
+                    <img src="assets/images/foam.png" class="mx-auto d-block drawer-image"
                     alt="#">
+                    <div id="foam-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text-dark">Milk Foam</p></div>
                 </div>
-                <div>
+                <div class="reset">
                     <button id="reset-button">Reset game</button>
                 </div>
 
@@ -73,8 +83,9 @@
         <div class="col-lg-2"><!--Nice to have - score and timer --></div>
 
         <div id="coffee-cup-container" class="col-lg-5 col-md-12 col-sm-12">
-            <img id="coffee-cup" src="assets/images/empty_cup.png" class="mx-auto d-block" alt="#">
+            <img class="img-responsive" id="coffee-cup" src="assets/images/coffee-cup.png" alt="#">
         </div>
+    </div>
     </div>
     
 
