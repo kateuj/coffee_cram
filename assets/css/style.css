@@ -1,76 +1,153 @@
+/* Universal styling */
 body {
     font-family: 'Rubik', sans-serif;
-    background-color: #291720;
+    background-color: #16324a;
+    margin: 1vw;
 }
 
 header {
-    margin-top: 5vh;
-}
-
-#drink-random {
-    font-family:'Silkscreen', sans-serif;
-    color:#820263;
+    padding-right: 1vw;
+    color:#b8ebb3;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
+    text-align: right;
+    font-family:'Silkscreen', sans-serif;
 }
 
-h1 {
-    color:#FB8B24;
+h2 {
+    color:#b8ebb3;
     text-align: center;
     font-size: 30px;
 }
 
 p {
-    color:#291720;
+    color:#ffffff;
 }
 
+button {
+    background-color: #16324a !important;
+    border-radius: 1rem;
+    color: #b8ebb3;
+    font-family:'Silkscreen', sans-serif;
+    padding: 1vh;
+}
+
+/* Text image overlays */
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.image-text {
+    color:#b8ebb3;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-text-dark {
+    color:#16324a;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.drawer-layout:hover .overlay{
+    opacity: 1;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Drink name */
+#drink-random {
+    font-family:'Silkscreen', sans-serif;
+    color:#88ebce;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Ingredients Drawer */
+
 #ingredients_drawer { 
-    background-color: #FB8B24;
+    background-color: #a42373;
     padding: 50px;
     border-radius: 2rem;
-    height: 40vh;
+    height: auto;
     margin:auto;
-    
 }
 
 .drawer-layout {
-    display: flex;
-    object-fit: cover;
-    max-width: 100%;
-    padding-bottom: 30px;
-    
     &:hover{
         opacity: 0.4;
     };
+    display: block;
+    position: relative;
+    cursor: pointer;
 }
 
+.drawer-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.reset {
+    text-align: center;
+}
+
+/* Coffee Cup container */
+
 #coffee-cup-container {
-    background-color: #820263;
+    background-color: #a42373;
     padding: 50px;
     border-radius: 2rem;
-    height: 80vh;
+    height: auto;
     display: flex;
     align-items: center;
 }
 
 #coffee-cup {
-    width: 40vh;
-}
-
-.reset-button {
-    display: flex;
+    display: block;
+    max-width: 60%;
+    height: auto;
     margin: auto;
-}
 
-.main-body {
-    margin: 1vw;
 }
 
 /* Media queries */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1365px) {
     .wrapper {
     display: flex;
     flex-direction: column-reverse;
-  };
+    max-width: 100%;
+    }
+
+  .main-body {
+    margin: 0;
+    }
+    
+    #ingredients_drawer { 
+        margin-top: 5vh;
+        width: 90vw;
+        height: auto;
+    }
+
+    #coffee-cup-container {
+        margin: auto;
+        width: 90vw;
+    }
+
 }
