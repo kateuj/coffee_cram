@@ -1,105 +1,88 @@
-const drinkNames = ["Mocha", "Latte", "Americano"];
+var drinkNames = ['Mocha', 'Latte', 'Americano'];
 var drinkName = drinkNames[Math.floor(Math.random()*drinkNames.length)];
+
+const espresso = document.querySelector('#espresso-ingredient');
+const doubleEspresso = document.querySelector('#double-espresso-ingredient');
+const steamedMilk = document.querySelector('#milk-ingredient');
+const chocolate = document.querySelector('#chocolate-ingredient');
+const water = document.querySelector('#water-ingredient');
 
 // Drink name generation
 $(document).ready(function() {
-    $("#drink-random").text(`${drinkName}`);
+    $('#drink-random').text(`${drinkName}`);
 });
 
-//Drink sequences
-const espresso = document.querySelector("#espresso-ingredient");
-const doubleEspresso = document.querySelector("#double-espresso-ingredient");
-const steamedMilk = document.querySelector("#milk-ingredient");
-const chocolate = document.querySelector("#chocolate-ingredient");
-const water = document.querySelector("#water-ingredient");
-
-const americanoSequence = [
-    espresso,
-    water
-];
-
-const mochaSequence = [
-    doubleEspresso,
-    chocolate,
-    steamedMilk
-];
-
-const latteSequence = [
-    espresso,
-    chocolate,
-    steamedMilk
-];
-
-// if americano random drink name
-
-// if $(americanoSequence).click(espresso).then((
-//     $("#coffee-cup").attr('src', 'assets/images/single_espresso.png');
-//     $("#water-ingredient").click(function() {
-//         $("#coffee-cup").attr('src', 'assets/images/americano.png');
-//         setTimeout(500);
-//         location.reload();
-//         alert('Well done!');
-//     });
-    
-
-// )
-    
-// });
-
-const ingredientClicked = ingredientClicked => {
-    const expectedChoice = americanoSequence();
-    if (expectedChoice === ingredientClicked) {
-        if (americanoSequence.length === 0) {
-            //start new round
-            sequence.push(drinkName());
-        }
-    } else {
-        alert('game over');
-    }
-};
+let userString = '';
 
 
-if (drinkName === "Americano") {
-    $("#espresso-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/single_espresso.png');
+if (drinkName === 'Americano') {
+    $('#espresso-ingredient').click(function() {
+        $('#coffee-cup').attr('src', 'assets/images/espresso-cup.png');
+        userString += 'espresso';
     });
-    $("#water-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/americano.png');
-        setTimeout(500);
-        alert('Well done!');
-        location.reload();
+    $('#foam-ingredient').click(function() {
+        alert('Oops! Try again!');
     });
-} else if (drinkName === "Mocha") {
-    $("#espresso-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/single_espresso.png');
+    $('#double-espresso-ingredient').click(function() {
+        alert('Oops! Try again!');
     });
-    $("#chocolate-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/chocolate.png');
+    $('#milk-ingredient').click(function() {
+        alert('Oops! Try again!');
     });
-    $("#milk-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/mocha.png');
-        alert('Well done!');
-        location.reload();
+    $('#chocolate-ingredient').click(function() {
+        alert('Oops! Try again!');
     });
-} else if (drinkName === "Latte") {
-    $("#espresso-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/single_espresso.png');
+
+    if (userString.includes('espresso')) {
+        $('#water-ingredient').click(function() {
+            $('#coffee-cup').attr('src', 'assets/images/americano.png');
+                setTimeout(function(){
+                alert('Well done!');
+                },1000);
+                setTimeout(function(){
+                location.reload();
+                },1000);
+                });
+            };
+
+} else if (drinkName === 'Mocha') {
+    $('#espresso-ingredient').click(function() {
+        $('#coffee-cup').attr('src', 'assets/images/espresso-cup.png');
     });
-    $("#milk-ingredient").click(function() {
-        $("#coffee-cup").attr('src', 'assets/images/mocha.png');
-        alert('Well done!');
-        location.reload();
+    $('#chocolate-ingredient').click(function() {
+        $('#coffee-cup').attr('src', 'assets/images/chocolate-cup.png');
+    });
+    $('#milk-ingredient').click(function() {
+        $('#coffee-cup').attr('src', 'assets/images/mocha.png');
+        setTimeout(function(){
+            alert('Well done!');
+          },1000);
+          setTimeout(function(){
+            location.reload();
+          },1000);
+    });
+} else if (drinkName === 'Latte') {
+    $('#espresso-ingredient').click(function() {
+        $('#coffee-cup').attr('src', 'assets/images/espresso-cup.png');
+    });
+    $('#milk-ingredient').click(function() {
+        $('#coffee-cup').attr('src', 'assets/images/latte.png');
+        setTimeout(function(){
+            alert('Well done!');
+          },1000);
+          setTimeout(function(){
+            location.reload();
+          },1000);
     });
 };
 
 // function showScore() {
-//     document.getElementById("score").innerText = game.score;
+//     document.getElementById('score').innerText = game.score;
 // }
 
 
 // Reset game
-$("#reset-button").click(function() {
-    $("#drink-random").text(`${drinkName}`);
+$('#reset-button').click(function() {
+    $('#drink-random').text(`${drinkName}`);
     location.reload();
-    
 });
