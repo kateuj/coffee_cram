@@ -43,36 +43,36 @@
         <div class="col-lg-5 col-md-12 col-sm-12" id="ingredients_drawer">
             <p>Tap the correct ingredients to make your drink</p>
             <div class="row">
-                <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
+                <div class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
                     <img src="assets/images/espresso.png" class="mx-auto d-block drawer-image"
                     alt="#">
-                    <div id="espresso-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text">Espresso</p></div>
+                    <div id="espresso-ingredient" class="overlay"><p class="image-text">Espresso</p></div>
                 </div>
-                <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
+                <div class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
                     <img src="assets/images/chocolate.png" class="mx-auto d-block drawer-image"
                     alt="#">
-                    <div id="chocolate-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text">Chocolate</p></div>
+                    <div id="chocolate-ingredient" class="overlay"><p class="image-text">Chocolate</p></div>
                 </div>    
-                <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
+                <div class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
                     <img src="assets/images/steamed-milk.png" class="mx-auto d-block drawer-image"
                     alt="#">
-                    <div id="milk-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text-dark">Steamed Milk</p></div>
+                    <div id="milk-ingredient"  class="overlay"><p class="image-text-dark">Steamed Milk</p></div>
                 </div>
-                <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
+                <div class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
                     <img src="assets/images/double-espresso.png" class="mx-auto d-block drawer-image"
                     alt="#">
-                    <div id="double-espresso-ingredient" onclick="ingredientClicked(event.currentTarget)"class="overlay"><p class="image-text">Double Espresso</p></div>
+                    <div id="double-espresso-ingredient" class="overlay"><p class="image-text">Double Espresso</p></div>
                 </div>
-                <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
+                <div class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
                     <img src="assets/images/water.png" class="mx-auto d-block drawer-image"
                     alt="#">
-                    <div id="water-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text">Water</p></div>
+                    <div id="water-ingredient" class="overlay"><p class="image-text">Water</p></div>
                 </div>
-                <div onclick="ingredientClicked(event.currentTarget)" class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
+                <div class="col-lg-4 col-md-2 col-sm-4 drawer-layout">
                     <img src="assets/images/foam.png" class="mx-auto d-block drawer-image"
                     alt="#">
-                    <div id="foam-ingredient" onclick="ingredientClicked(event.currentTarget)" class="overlay"><p class="image-text-dark">Milk Foam</p></div>
-                </div>
+                    <div id="foam-ingredient" class="overlay"><p class="image-text-dark">Milk Foam</p></div>
+             </div>
                 <div class="reset">
                     <button id="reset-button">Reset game</button>
                 </div>
@@ -80,7 +80,14 @@
             </div>
         </div>
         
-        <div class="col-lg-2"><!--Nice to have - score and timer --></div>
+        <div class="col-lg-2">
+            <div id="counter">
+                10
+            </div>
+            <div id="score">
+                
+            </div>
+        </div>
 
         <div id="coffee-cup-container" class="col-lg-5 col-md-12 col-sm-12">
             <img class="img-responsive" id="coffee-cup" src="assets/images/coffee-cup.png" alt="#">
