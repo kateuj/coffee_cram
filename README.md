@@ -1,7 +1,7 @@
 # Coffee Cram
 
-This is my Milestone 2 project, which I have designed to display my own illustration work as an online portfolio.
-To keep it concise, I have chosen a selection of my most recent work and displayed in a clear manner for prospective clients and collaborators to get a feel for my artistic style and contact me if desired. Due to a lot of people using mobile devices more, especially on the go, I have used the 'mobile first' design technique and made sure the site is fully responsive.
+For my Milestone 2 project I have created a barista simulation game in javascript. The game randomly generates a drink name for the user to then select the correct ingredients to create that particular drink.
+I wanted to create something fun that could potentially be used as a tool for users to brush up on their coffee drink knowledge, perhaps even during a training setting as an ice-breaker exercise. As in my previous project, I have proceeding with the mobile first' design technique to ensure my game can be accessed on the go on mobiles and tablets, not just on laptops and computers, so the site is fully responsive.
 
 ![Screen mock-ups of Coffee Cram website](assets/readme-images/)
 
@@ -22,47 +22,31 @@ To keep it concise, I have chosen a selection of my most recent work and display
 
 # Planning & Development #
 
-### Business Strategy
-As an Illustrator, I have come to a stage where I would like to extend my professional presence online. My Instagram profile has gained some leads for work on occasion, but not at the level I would like it to be in an ideal situation.
-
-I have wanted to create an Illustration portfolio site with the hope of gaining more clients and collaboration opportunities through people finding my site organically, but also for me to have an easier of demonstrating my abilities within interview settings - a link to a bright, colour, interactive website is far more eye-catching than a PDF portfolio that I have used in the past to show my work to prospective clients in the past.
+### Site Purpose
+This game is been designed mainly to create a positive emotional response through entertainment. It could also be used as an informal and fun introduction for barista training where the trainer could use this as a tool to test their trainee's knowledge of drinks before and after training to have a constructive comparison on how their knowledge has been built and any areas for improvement.
 
 ### Target Audience
 
-Predominantly, my target audience will be prospective clients checking my style for suitability of their project, as well as potential collaborators and general visitors with an interest in illustration, which can in theory increase my exposure by sharing my site in their social media so increase my reach.
-
-I collated some research on 'AdTargeting', where I can get an overview of what demographic search for certain key words. I found that the keyword 'illustration' is predominantly searched by a female demographic (61%), within the 35-44 age range. Digging a bit deeper, I found that 'digital illustration' is again searched most by females (56%) within the 25-34 age range.
-
-![Overview of AdTargeting interest for the word 'Illustration'](assets/readme-images/ad-targeting-research-screenshot.png)
-
-#### Digital Illustration Keyword Search
-* 56% Female demographic.
-* 25-34 age range.
-
-This emphasised to me that my site needs to be fully responsive, as younger target audiences are more likely to view sites on their mobile. It has also inspired me from a design perspective, to keep the whole aesthetic bright and fun to be appealing to younger audiences, as well as potentially looking at a pastel colour palette to give an overall feminine feel to the site.
+Broadly, the game is aimed at anyone with an interest in coffee, which could include people seeking entertainment in the form of a quiz, but also as mentioned above for trainee barista to revise their knowledge, as well as barista trainers to used as an energy boosting / ice-breaking tool in training sessions with their trainees.
 
 ### User Needs
 
 #### User Stories
-1. Viewing my work to check suitability for a commission.
-2. Wishing to contact me for a collaboration.
-3. Wishing to contact me for a commission.
-4. Checking my portfolio for updates.
-5. Looking for inspiration for their own illustrative work.
+1. User interested in coffee wants seeks coffee content based entertainment.
+2. A barista trainee wanting to test their drink making knowledge.
+3. A barista trainer uses the game as a tool to test their trainees' knowledge.
 
 ### Site Objectives
 
-* An introduction to me and my professional experience.
-* To display my work in a bright and fun way to stand out from the crowd.
-* To build responsive site that works one mobile, tablet and desktop.
-* Give the user a positive experience.
-* Make the site clear and concise.
+* Test user's knowledge of coffee drink making.
+* Give the user a positive emotion experience with bright and fun colours and imagery.
+* Build responsive game that works on mobile, tablet and desktop.
+* Make the game easy to use with rules explained.
 * Easy to navigate around and find key information.
-* Aesthetically pleasing to demonstrate design skills.
-* A good site flow through carefully planned UI.
+* A good UI site flow.
 * Provide the users with a way of contacting me.
 * To be accessible for screen readers.
-* Links to my social media.
+* Links to the creator's social media in footer.
 
 ### Approach
 
