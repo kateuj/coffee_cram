@@ -7,15 +7,16 @@ body {
 header {
     padding-right: 1vw;
     color:#a42373;
-    text-align: center;
-    font-size: 30px;
     text-align: right;
 }
 
 h1 {
     font-family:'Silkscreen', sans-serif;
     font-size: 3vw;
+    display: inline;
+    margin: auto;
 }
+
 h2 {
     color:#b8ebb3;
     text-align: center;
@@ -145,16 +146,12 @@ footer {
 .social-networks li {
     display: inline;
     color: #ffffff;
+    font-size: 1.7rem;
 }
 
 .social-networks i {
-    font-size: 1.7rem;
     padding: 2%;
     color: #fff;
-}
-
-.footer-title {
-    padding-top: 2%;
 }
 
 /* Media queries */
