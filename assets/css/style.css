@@ -113,6 +113,17 @@ button {
     text-align: center;
 }
 
+/*Timer and Score*/
+.progress-measures {
+    margin: auto;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.progress-measures p {
+    padding: 15%;
+}
+
 /* Coffee Cup container */
 
 #coffee-cup-container {
