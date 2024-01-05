@@ -144,12 +144,17 @@ footer {
 
 .social-networks li {
     display: inline;
+    color: #ffffff;
 }
 
 .social-networks i {
     font-size: 1.7rem;
     padding: 2%;
     color: #fff;
+}
+
+.footer-title {
+    padding-top: 2%;
 }
 
 /* Media queries */
