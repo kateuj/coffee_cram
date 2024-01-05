@@ -46,40 +46,33 @@ Broadly, the game is aimed at anyone with an interest in coffee, which could inc
 * A good UI site flow.
 * Provide the users with a way of contacting me.
 * To be accessible for screen readers.
+* To be able to reset the game easily.
 * Links to the creator's social media in footer.
 
 ### Approach
 
-* The information will be provided to the user logically and informed by planning research.
-* The site will be created following the principles of user experience design.
-* The site will provide users links through to my social media accounts for additional content
-* The site will provide users with a contact form, should they wish to contact me 
-* The site will provide users with access to a gallery of my illustration work.
+* User experience design will be planned and carefully considered when designing the flow of layout of the game.
+* The site will provide users links through to my social media accounts to contact me.
 * The content of the site will be family-friendly and accessible to all.
-* The site will be easy to navigate, intuitive with design consistency.
+* The game design will be consistent and visually engaging for the users.
 
 ![Information Flow of the site](assets/readme-images/information-flow.png)
 
 
 ### Research
 
-I conducted some research, looking at other artistic portfolios out there, examining their content, navigation and UI to ensure I could create a competitive online portfolio.
+I looked at other javascript-based games before making a decision on what I wanted to create, to see what was possible using the javascript concepts and skills I have learnt recently.
 
 Sites included:
-* [Sara Tepes Portfolio](https://www.sarucatepes.com/)
-* [Anoosha Syed Portfolio](http://www.anooshasyed.com/)
-* [Andrew Thomson Portfolio](https://athomson.art/)
+* [Burger Make](https://www.culinaryschools.org/kids-games/burger-maker/)
+* [Hang Man](https://codepen.io/cathydutton/pen/JjpxMm)
 
 Thoughts noted:
-* Handwritten style logos.
-* Nav bar at the top of the page.
+* Minimalist design.
 * Responsive design.
-* Similar user journey - Home - Gallery - Contact.
-* Same gallery grid for their portfolio.
-* They have contact forms.
-* Logos at the top left of the page.
-* White backgrounds to as to make the images the main focus.
-* Link to Patreon for users to support the artist.
+* Game on one page.
+* Pop up with instructions included.
+
 
 All of the above, I have reflecting in the design of my own website.
 
@@ -414,3 +407,9 @@ Here is the live link to my website - <https://kateuj.github.io/kate-brush-portf
 https://www.youtube.com/watch?v=Qt-70hrdJZI&ab_channel=LearnWeb text overlay for images
 
 https://stackoverflow.com/questions/23645439/add-time-delay-to-javascript-popup delay time out function
+
+
+
+bugs
+random drink not refresh page
+update order count and score
