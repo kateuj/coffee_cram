@@ -28,6 +28,7 @@ let userString = '';
 
 let playerScore = divScore.textContent * 1 + 10;
 let orderCount = divOrderCount.textContent * 1 + 1;
+let timeRunOut = divScore.textContent * 1 - 5;
 
 //If player gets correct answer, runs below function
 function playerWin() {
@@ -146,7 +147,7 @@ setInterval(function () {
     div.textContent = count;
     if (count <= 0) {
         location.reload('#drink-random');
-        // counter -15
+        divScore.textContent = timeRunOut;
     }
   }, 1000);
 
