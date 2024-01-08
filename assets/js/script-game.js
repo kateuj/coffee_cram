@@ -1,5 +1,5 @@
-var drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espresso', 'Double Espresso', 'Cappuccino'];
-var drinkName = drinkNames[Math.floor(Math.random()*drinkNames.length)];
+const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espresso', 'Double Espresso', 'Cappuccino'];
+let drinkName = drinkNames[Math.floor(Math.random()*drinkNames.length)];
 
 const espresso = document.querySelector('#espresso-ingredient');
 const doubleEspresso = document.querySelector('#double-espresso-ingredient');
@@ -7,19 +7,19 @@ const steamedMilk = document.querySelector('#milk-ingredient');
 const chocolate = document.querySelector('#chocolate-ingredient');
 const water = document.querySelector('#water-ingredient');
 
-var divScore = document.querySelector("#player-score");
-var divOrderCount = document.querySelector("#order-count");
+let divScore = document.querySelector("#player-score");
+let divOrderCount = document.querySelector("#order-count");
 
-var americano = 'double espresso, water';
-var latte = 'double espresso, milk';
-var mocha = 'double espresso, chocolate, milk';
-var flatWhite = 'double espresso, milk';
-var cappuccino = 'espresso, milk, foam';
+let americano = 'double espresso, water';
+let latte = 'double espresso, milk';
+let mocha = 'double espresso, chocolate, milk';
+let flatWhite = 'double espresso, milk';
+let cappuccino = 'espresso, milk, foam';
 
 //add loop for 10 goes to restart with alert and text with score on
 
 // Drink name generation
-$(document).ready(function() {
+$(document).ready(function () {
     $('#drink-random').text(`${drinkName}`);
 });
 
@@ -89,13 +89,6 @@ $('#milk-ingredient').click(function() {
         $('#coffee-cup').attr('src', 'assets/images/milk-and-coffee.webp');
     } else if (drinkName == 'Mocha' && userString == mocha) {
         $('#coffee-cup').attr('src', 'assets/images/mocha.webp');
-        setTimeout(function(){
-            alert('Well done!');
-        },1000);
-        setTimeout(function(){
-            userString = '';
-            location.reload('#drink-random');
-        },1000);
         playerWin();
     } else if (drinkName == 'Flat White' && userString == flatWhite) {
         $('#coffee-cup').attr('src', 'assets/images/flat-white.webp');
@@ -142,8 +135,8 @@ $('#foam-ingredient').click(function() {
 
 // Timer countdown for each question
 setInterval(function () {
-    var div = document.querySelector("#timer");
-    var count = div.textContent * 1 - 1;
+    let div = document.querySelector("#timer");
+    let count = div.textContent * 1 - 1;
     div.textContent = count;
     if (count <= 0) {
         location.reload('#drink-random');

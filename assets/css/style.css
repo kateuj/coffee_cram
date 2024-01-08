@@ -2,6 +2,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     background-color: #291720;
+    color: #ffffff;
 }
 
 header {
@@ -23,12 +24,16 @@ h2 {
     font-size: 30px;
 }
 
+h3 {
+    color: #88ebce;
+}
+
 p {
     color:#ffffff;
 }
 
 button {
-    background-color: #16324a !important;
+    background-color: #16324a;
     border-radius: 1rem;
     color: #b8ebb3;
     font-family:'Silkscreen', sans-serif;
@@ -190,3 +195,16 @@ footer {
     }
 
 }
+
+/* Contact Form */
+
+.contact-form {
+    margin: auto;
+}
+
+.form-control {
+    margin: 2%;
+    background-color: #b8ebb3;
+    padding: 1%;
+}
+
