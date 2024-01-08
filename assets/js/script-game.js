@@ -56,7 +56,7 @@ let userString = '';
 $('#espresso-ingredient').click(function() {
     userString += 'espresso';
     if (drinkName == 'Single Espresso' && userString == 'espresso') {
-        $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
+        $('#coffee-cup').attr('src', 'assets/images/single-espresso-cup.webp');
         playerWin();
     } else if (drinkName == 'Cappuccino' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
@@ -96,7 +96,7 @@ $('#milk-ingredient').click(function() {
         $('#coffee-cup').attr('src', 'assets/images/latte.webp');
         playerWin();
     } else if (drinkName == 'Cappuccino' && userString == 'espresso, milk') {
-        $('#coffee-cup').attr('src', 'assets/images/chocolate-cup.webp');
+        $('#coffee-cup').attr('src', 'assets/images/milk-and-coffee.webp');
     } else if (drinkName == 'Mocha' && userString == mocha) {
         $('#coffee-cup').attr('src', 'assets/images/mocha.webp');
         setTimeout(function(){
@@ -128,7 +128,7 @@ $('#double-espresso-ingredient').click(function() {
     } else if (drinkName == 'Mocha' && userString == 'double espresso') {
         $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
     } else if (drinkName == 'Double Espresso' && userString == 'double espresso') {
-        $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
+        $('#coffee-cup').attr('src', 'assets/images/double-espresso-cup.webp');
         playerWin();
     } else {
         alert('Oops! Try again!');
@@ -140,7 +140,7 @@ $('#double-espresso-ingredient').click(function() {
 $('#foam-ingredient').click(function() {
     userString += ', foam';
     if (drinkName == 'Cappuccino' && userString == cappuccino) {
-        $('#coffee-cup').attr('src', 'assets/images/latte.webp');
+        $('#coffee-cup').attr('src', 'assets/images/cappuccino.webp');
         playerWin();
     } else {
         alert('Oops! Try again!');
