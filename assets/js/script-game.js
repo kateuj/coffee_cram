@@ -97,7 +97,7 @@ $('#milk-ingredient').click(function() {
         },1000);
         playerWin();
     } else if (drinkName == 'Flat White' && userString == flatWhite) {
-        $('#coffee-cup').attr('src', 'assets/images/latte.webp');
+        $('#coffee-cup').attr('src', 'assets/images/flat-white.webp');
         playerWin();
     } else {
         alert('Oops! Try again!');
