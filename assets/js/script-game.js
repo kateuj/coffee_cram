@@ -171,6 +171,8 @@ setInterval(function () {
     div.textContent = count;
     if (count <= 0) {
         divScore.textContent = timeRunOut;
+        count = 0;
+        alert ("Out of time, try again!");
         location.reload();
     }
   }, 1000);
