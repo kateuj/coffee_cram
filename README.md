@@ -413,3 +413,4 @@ https://stackoverflow.com/questions/23645439/add-time-delay-to-javascript-popup 
 bugs
 random drink not refresh page
 update order count and score
+emailjs not feeding in parameter - added in js script to fix
