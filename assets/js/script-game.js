@@ -37,7 +37,8 @@ function playerWin() {
     setTimeout(function(){
         alert('Well done!');
         userString = '';
-        location.reload('#drink-random');
+        $('#drink-random').text(`${drinkName}`);
+        console.log(drinkName);
         //timer reset
     },1000);
 };
