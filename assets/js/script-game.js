@@ -63,8 +63,6 @@ function increaseOrderCount() {
 
 //If player gets correct answer, runs below function
 function playerWin() {
-    divScore.textContent = playerScore;
-    divOrderCount.textContent = orderCount;
     setTimeout(function(){
         increasePlayerScore();
         increaseOrderCount();
@@ -173,9 +171,6 @@ setInterval(function () {
     div.textContent = count;
     if (count <= 0) {
         divScore.textContent = timeRunOut;
-        drinkName = getDrinkName();
-        alert("Try again!");
-        stopTimer();
         location.reload();
     }
   }, 1000);
