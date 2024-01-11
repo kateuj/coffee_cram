@@ -44,15 +44,30 @@ $(document).ready(function () {
 // Empty string generated for user ingredient clicks to make an ingredient list to check against the variable strings of each drink's mock up.
 let userString = '';
 
-let playerScore = divScore.textContent * 1 + 10;
-let orderCount = divOrderCount.textContent * 1 + 1;
-let timeRunOut = divScore.textContent * 1 - 5;
+let playerScore = 0;
+let orderCount = 0;
+let timeRunOut = 0;
+
+function increasePlayerScore() {
+    playerScore+=10;
+    $('#player-score').text(`${playerScore}`);
+};
+
+function increaseOrderCount() {
+    orderCount++;
+    $('#order-count').text(`${orderCount}`);
+};
+// let playerScore = divScore.textContent * 1 + 10;
+// let orderCount = divOrderCount.textContent * 1 + 1;
+// let timeRunOut = divScore.textContent * 1 - 5;
 
 //If player gets correct answer, runs below function
 function playerWin() {
     divScore.textContent = playerScore;
     divOrderCount.textContent = orderCount;
     setTimeout(function(){
+        increasePlayerScore();
+        increaseOrderCount();
         alert('Well done!');
         userString = '';
         drinkName = getDrinkName();
@@ -151,7 +166,6 @@ $('#foam-ingredient').click(function() {
     };
 });
 
-
 // Timer countdown for each question
 setInterval(function () {
     let div = document.querySelector("#timer");
@@ -160,12 +174,15 @@ setInterval(function () {
     if (count <= 0) {
         divScore.textContent = timeRunOut;
         drinkName = getDrinkName();
-        $('#drink-random').text(`${drinkName}`);
-        $('#timer').text(`15`);
-        timeRunOut;
+        alert("Try again!");
+        stopTimer();
+        location.reload();
     }
   }, 1000);
 
+  function stopTimer() {
+    count = 0;
+}
 //   updateScore(function () {
 //     var divScore = document.querySelector("#player-score");
 //     playerScore+=10;
