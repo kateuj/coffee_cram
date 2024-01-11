@@ -82,13 +82,17 @@ I used Figma and Procreate to plan and design my wireframes and user journey. Fi
 
 #### Mobile Design Wireframe Sketch
 
-![mobile design wireframe](assets/readme-images/wireframe-mobile.png)
+![mobile design wireframe](assets/readme-images/mobile-wireframes.png)
+
+#### Tablet Design Wireframe Sketch
+
+![tablet design wireframe](assets/readme-images/tablet-wireframes.png)
 
 #### Desktop Design Wireframe Sketch
 
-![desktop design wireframe](assets/readme-images/wireframe-desktop.png)
+![desktop design wireframe](assets/readme-images/desktop-wireframes.png)
 
-[Link to my Figma page](https://www.figma.com/file/mgqUNn2vVWerwPxnTaCVlg/Kate-Brush-Portfolio-Planning-%26-Development-(Community)?type=design&node-id=0%3A1&mode=design&t=aJDzqDB2iJkbcAQF-1)
+[Link to my Figma page](https://www.figma.com/file/sE1FXwAGFZf3FEYIDAB8l0/Milestone-2---Coffee-Cram?type=design&node-id=0%3A1&mode=design&t=spVJTdSswAGCzuT1-1)
 
 ### Colour Scheme
 
@@ -414,3 +418,4 @@ bugs
 random drink not refresh page
 update order count and score
 emailjs not feeding in parameter - added in js script to fix
+https://www.youtube.com/watch?v=r_PL0K2fGkY&ab_channel=FlorinPop
