@@ -222,7 +222,18 @@ footer {
     padding: 1%;
 }
 
+/* Error page */
+
 .error-page {
     text-align: center;
 }
 
+/* Thank you page */
+
+.thank-you {
+    text-align: center;
+}
+
+#counter {
+    text-align: center;
+}
