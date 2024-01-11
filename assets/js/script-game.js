@@ -1,5 +1,23 @@
 const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espresso', 'Double Espresso', 'Cappuccino'];
-let drinkName = drinkNames[Math.floor(Math.random()*drinkNames.length)];
+// let shuffledArray = drinkNames.sort((a, b) => 0.5 - Math.random());
+
+function getDrinkName() {
+    return drinkNames[Math.floor(Math.random()*drinkNames.length)];
+    
+};
+
+let drinkName = getDrinkName();
+
+// let i = 
+
+// for (let i = 0; i < shuffledArray.length; i++) {
+//     console.log(shuffledArray[i]);
+
+// };
+
+// function myFunction() {
+//     document.getElementById("drink-random").innerHTML = drinkNameIndex;
+//   };
 
 const espresso = document.querySelector('#espresso-ingredient');
 const doubleEspresso = document.querySelector('#double-espresso-ingredient');
@@ -37,9 +55,9 @@ function playerWin() {
     setTimeout(function(){
         alert('Well done!');
         userString = '';
+        drinkName = getDrinkName();
         $('#drink-random').text(`${drinkName}`);
-        console.log(drinkName);
-        //timer reset
+        $('#timer').text(`15`);
     },1000);
 };
 
@@ -140,8 +158,11 @@ setInterval(function () {
     let count = div.textContent * 1 - 1;
     div.textContent = count;
     if (count <= 0) {
-        location.reload('#drink-random');
         divScore.textContent = timeRunOut;
+        drinkName = getDrinkName();
+        $('#drink-random').text(`${drinkName}`);
+        $('#timer').text(`15`);
+        timeRunOut;
     }
   }, 1000);
 
