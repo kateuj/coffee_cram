@@ -57,21 +57,31 @@ function increaseOrderCount() {
     $('#order-count').text(`${orderCount}`);
 };
 
+function decreasePlayerScore() {
+    playerScore-=5;
+    $('#player-score').text(`${playerScore}`);
+};
+
 // Timer function to start when the user clicks off the first pop-up
+$('#openModal').click(function() {
+    $('#timer').text(`Paused...`);
+});
+
 $('#closeModal').click(function() {
         // Timer countdown for each question
+    $('#timer').text(`15`);
     setInterval(function () {
         let div = document.querySelector("#timer");
         let count = div.textContent * 1 - 1;
         div.textContent = count;
         if (count <= 0) {
-            location.reload();
+            $('#timer').text(` `);
+            openPopUpTime();
         };
     }, 1000);
 });
 
 // Pop-up messages
-const closeBtnPop = document.getElementById("close-modal-pop");
 const modalPop = document.getElementById("modal-pop");
 
 // Try again
@@ -86,12 +96,16 @@ function openPopUpTry() {
     },2000);
 };
 
-closeBtnPop.addEventListener("click", () => {
-    modalPop.classList.remove("open");
-});
-
 // Run out of time
-
+function openPopUpTime() {
+    modalPop.classList.add("open");
+    document.getElementById("modal-inner").innerHTML = `<h2>You've run out of time!</h2>
+    <p>You scored: ${playerScore} and got the following answers correct ${drinkNames}</p>
+    <button id="close-modal-pop">Play again?</button>`;
+    $("#close-modal-pop").click(function(){
+        location.reload();
+    });
+};
 
 // Correct answer
 function openPopUpWellDone() {
@@ -101,6 +115,16 @@ function openPopUpWellDone() {
     setTimeout(function(){
         modalPop.classList.remove("open");
     },1500);
+};
+
+function gameOver() {
+    modalPop.classList.add("open");
+    document.getElementById("modal-inner").innerHTML = `<h2>Game over</h2>
+    <p>You scored: ${playerScore} and got the following answers correct ${drinkNames}</p>
+    <button id="close-modal-pop">Play again?</button>`;
+    $("#close-modal-pop").click(function(){
+        location.reload();
+    });
 };
 
 
@@ -123,8 +147,10 @@ function tryAgain() {
         openPopUpTry();
         userString = '';
         $('#timer').text(`15`);
+        decreasePlayerScore();
     },1000);
 };
+
 
 // Click functions with if statements for each ingredient in the drawer. Each triggers the coffee cup image to change to reflect the user's choices or resets the level for incorrect answers.
 $('#espresso-ingredient').click(function() {
