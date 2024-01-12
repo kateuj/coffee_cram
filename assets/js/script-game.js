@@ -3,7 +3,6 @@ const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espress
 
 function getDrinkName() {
     return drinkNames[Math.floor(Math.random()*drinkNames.length)];
-    
 };
 
 let drinkName = getDrinkName();
@@ -57,19 +56,72 @@ function increaseOrderCount() {
     orderCount++;
     $('#order-count').text(`${orderCount}`);
 };
-// let playerScore = divScore.textContent * 1 + 10;
-// let orderCount = divOrderCount.textContent * 1 + 1;
-// let timeRunOut = divScore.textContent * 1 - 5;
+
+// Timer function to start when the user clicks off the first pop-up
+$('#closeModal').click(function() {
+        // Timer countdown for each question
+    setInterval(function () {
+        let div = document.querySelector("#timer");
+        let count = div.textContent * 1 - 1;
+        div.textContent = count;
+        if (count <= 0) {
+            location.reload();
+        };
+    }, 1000);
+});
+
+// Pop-up messages
+const closeBtnPop = document.getElementById("close-modal-pop");
+const modalPop = document.getElementById("modal-pop");
+
+// Try again
+function openPopUpTry() {
+    modalPop.classList.add("open");
+    document.getElementById("modal-inner").innerHTML = `<h2>Oops!</h2>
+    <p>Try another ingredient. <br>
+    Check the menu again if you need to!</p>`;
+    setTimeout(function(){
+        $('#timer').text(`15`);
+        modalPop.classList.remove("open");
+    },2000);
+};
+
+closeBtnPop.addEventListener("click", () => {
+    modalPop.classList.remove("open");
+});
+
+// Run out of time
+
+
+// Correct answer
+function openPopUpWellDone() {
+    modalPop.classList.add("open");
+    document.getElementById("modal-inner").innerHTML = `<h2>Well Done!</h2>
+    <p>You got it right!</p>`;
+    setTimeout(function(){
+        modalPop.classList.remove("open");
+    },1500);
+};
+
+
 
 //If player gets correct answer, runs below function
 function playerWin() {
     setTimeout(function(){
         increasePlayerScore();
         increaseOrderCount();
-        alert('Well done!');
+        openPopUpWellDone();
         userString = '';
         drinkName = getDrinkName();
         $('#drink-random').text(`${drinkName}`);
+        $('#timer').text(`15`);
+    },1000);
+};
+
+function tryAgain() {
+    setTimeout(function(){
+        openPopUpTry();
+        userString = '';
         $('#timer').text(`15`);
     },1000);
 };
@@ -83,8 +135,7 @@ $('#espresso-ingredient').click(function() {
     } else if (drinkName == 'Cappuccino' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
     } else {
-        alert('Oops! Start again!');
-        userString = '';
+        tryAgain();
         $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
     };
 });
@@ -95,8 +146,7 @@ $('#water-ingredient').click(function() {
         $('#coffee-cup').attr('src', 'assets/images/americano.webp');
         playerWin();
     } else {
-        alert('Oops! Try again!');
-        userString = '';
+        tryAgain();
         $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
     };
 });
@@ -106,8 +156,7 @@ $('#chocolate-ingredient').click(function() {
     if (drinkName == 'Mocha' && userString == 'double espresso, chocolate') {
         $('#coffee-cup').attr('src', 'assets/images/chocolate-cup.webp');
     } else {
-        alert('Oops! Try again!');
-        userString = '';
+        tryAgain();
         $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
     };
 });
@@ -126,8 +175,7 @@ $('#milk-ingredient').click(function() {
         $('#coffee-cup').attr('src', 'assets/images/flat-white.webp');
         playerWin();
     } else {
-        alert('Oops! Try again!');
-        userString = '';
+        tryAgain();
         $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
     };
 });
@@ -146,8 +194,7 @@ $('#double-espresso-ingredient').click(function() {
         $('#coffee-cup').attr('src', 'assets/images/double-espresso-cup.webp');
         playerWin();
     } else {
-        alert('Oops! Try again!');
-        userString = '';
+        tryAgain();
         $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
     };
 });
@@ -158,46 +205,37 @@ $('#foam-ingredient').click(function() {
         $('#coffee-cup').attr('src', 'assets/images/cappuccino.webp');
         playerWin();
     } else {
-        alert('Oops! Try again!');
-        userString = '';
+        tryAgain();
         $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
     };
 });
 
-// Timer countdown for each question
-setInterval(function () {
-    let div = document.querySelector("#timer");
-    let count = div.textContent * 1 - 1;
-    div.textContent = count;
-    if (count <= 0) {
-        divScore.textContent = timeRunOut;
-        count = 0;
-        alert ("Out of time, try again!");
-        location.reload();
-    }
-  }, 1000);
+// let totalTime = 10;
+// let timeElapsed = 0;
+// let interval;
 
-  function stopTimer() {
-    count = 0;
-}
+// function stopTimer() {
+//     clearCount(count);
+//     location.reload();
+// };
+
+// function startTimer() {
+//     let div = document.querySelector("#timer");
+//     div.textContent = totalTime;
+//     interval = setInterval(function () {
+//         totalTime--;
+//         div.textContent = totalTime;
+//         if (totalTime >= 0) {
+//           stopTimer();
+//         }
+//      } , 1000);
+// };
 //   updateScore(function () {
 //     var divScore = document.querySelector("#player-score");
 //     playerScore+=10;
 //     divScore.textContent = playerScore;
 
 // });
-
-
-
-// // Score
-// setScore(function () {
-//     var divScore = document.querySelector("#score");
-//     totalScore = divScore.textContent * 1 + 10;
-//     div.textContent = score;
-//     if ()
-//     $('#score').text(`${totalScore}`);
-// };
-// // Order count
 
 
 // Reset game
