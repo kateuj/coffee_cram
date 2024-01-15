@@ -7,19 +7,19 @@ body {
 
 header {
     padding-right: 1vw;
-    color:#a42373;
+    color: #a42373;
     text-align: right;
 }
 
 h1 {
-    font-family:'Silkscreen', sans-serif;
+    font-family: 'Silkscreen', sans-serif;
     font-size: 3vw;
     display: inline;
     margin: auto;
 }
 
 h2 {
-    color:#a42373;
+    color: #a42373;
     text-align: center;
     font-size: 1.7rem;
 }
@@ -29,7 +29,7 @@ h3 {
 }
 
 p {
-    color:#ffffff;
+    color: #ffffff;
     font-size: 1.2rem;
 
 }
@@ -38,7 +38,7 @@ button {
     background-color: #16324a;
     border-radius: 1rem;
     color: #b8ebb3;
-    font-family:'Silkscreen', sans-serif;
+    font-family: 'Silkscreen', sans-serif;
     padding: 1vh;
     margin: auto;
     text-align: center;
@@ -103,6 +103,7 @@ a:hover {
     text-align: center;
 }
 
+/*How to play pop-up image*/
 #coffee-menu {
     height: 60vh;
     padding: 1%;
@@ -111,8 +112,8 @@ a:hover {
 /* Text image overlays */
 .overlay {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -122,56 +123,58 @@ a:hover {
 }
 
 .image-text {
-    color:#b8ebb3;
+    color: #b8ebb3;
     font-size: 20px;
     text-align: center;
     padding: 20px;
 }
 
 .image-text-dark {
-    color:#16324a;
+    color: #16324a;
     font-size: 20px;
     text-align: center;
     padding: 20px;
 }
 
-.drawer-layout:hover .overlay{
+.drawer-layout:hover .overlay {
     opacity: 1;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
 
+/*Game section*/
 .game-area {
     margin: 1vw;
     margin-bottom: 120px;
 }
+
 /* Drink name */
 #drink-random {
-    font-family:'Silkscreen', sans-serif;
-    color:#88ebce;
+    font-family: 'Silkscreen', sans-serif;
+    color: #88ebce;
     text-align: center;
     font-size: 40px;
 }
 
 /* Ingredients Drawer */
-
-#ingredients_drawer { 
+#ingredients_drawer {
     background-color: #a42373;
     padding: 50px;
     border-radius: 2rem;
     height: auto;
-    margin:auto;
+    margin: auto;
 }
 
 .drawer-layout {
-    &:hover{
+    &:hover {
         opacity: 0.4;
-    };
+    }
+
     display: block;
     position: relative;
     cursor: pointer;
@@ -200,7 +203,6 @@ a:hover {
 }
 
 /* Coffee Cup container */
-
 #coffee-cup-container {
     background-color: #a42373;
     padding: 50px;
@@ -240,8 +242,42 @@ footer {
     color: #fff;
 }
 
+/* Contact Form */
+.contact-form {
+    margin: auto;
+}
+
+.form-control {
+    margin: 2%;
+    background-color: #b8ebb3;
+    padding: 1%;
+}
+
+/* Error page */
+.error-page {
+    text-align: center;
+}
+
+/* Thank you page */
+.thank-you {
+    text-align: center;
+}
+
+#counter {
+    text-align: center;
+}
+
+.main-header {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 5vw;
+}
+
 /* Media queries */
 @media screen and (max-width: 991px) {
+
+    button {
+        font-size: 0.8rem;
+    }
 
     .progress-measures {
         padding: 0;
@@ -249,10 +285,6 @@ footer {
     }
 
     .progress-measures p {
-        font-size: 0.8rem;
-    }
-
-    button {
         font-size: 0.8rem;
     }
 
@@ -264,19 +296,17 @@ footer {
         padding: 10px;
     }
 
-
-
-
 }
 
 @media screen and (max-width: 767px) {
+
     .wrapper {
-    display: flex;
-    flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .main-body {
-    margin: 0;
+        margin: 0;
     }
 
     .progress-measures {
@@ -303,12 +333,29 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+
+    h1 {
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
     .progress-measure {
         padding: 0 !important;
         margin: 0;
         position: relative;
     }
-    
+
     .progress-measures p {
         font-size: 0.8rem;
     }
@@ -326,10 +373,6 @@ footer {
         height: 5vh !important;
     }
 
-    footer {
-        font-size: 0.8rem;
-    }
-
     .modal-inner {
         min-width: 280px;
     }
@@ -340,48 +383,4 @@ footer {
         padding: 1%;
     }
 
-    h1 {
-        font-size: 2vw;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    p {
-        font-size: 1rem;
-    }
-}
-
-/* Contact Form */
-
-.contact-form {
-    margin: auto;
-}
-
-.form-control {
-    margin: 2%;
-    background-color: #b8ebb3;
-    padding: 1%;
-}
-
-/* Error page */
-
-.error-page {
-    text-align: center;
-}
-
-/* Thank you page */
-
-.thank-you {
-    text-align: center;
-}
-
-#counter {
-    text-align: center;
-}
-
-.main-header {
-    font-family:'Silkscreen', sans-serif;
-    font-size: 5vw;
 }
