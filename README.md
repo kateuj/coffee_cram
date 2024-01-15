@@ -266,11 +266,9 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 ### W3C Validator
 I ran my site pages through the W3C validator and I received one error for a missing alt tag for an image on my index page. 
 
-![Unclosed div element error screenshot](assets/readme-images/w3c-validator-check.png)
+![Alt tag required screenshot](assets/readme-images/w3c-validator-check.png)
 
 I corrected the code and all three pages now return no html errors.
-
-![HTML no errors screenshot](assets/readme-images/validator-testing-no-errors.png)
 
 ### CSS Jigsaw Validator
 I put the CSS stylesheet through the Jigsaw Validator and it returned no errors.
