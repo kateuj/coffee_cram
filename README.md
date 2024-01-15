@@ -275,26 +275,20 @@ My initial desktop performance came out as below:
   ![Initial site performance](assets/readme-images/initial-site-performance.png)
 
 To improve my score, I did the following:
-* Updated button text colour in form to a darker colour to improve readability contrast and site accessibility.
+* Updated the coffee menu pop-up image to a higher res version.
+* Added alt tags to all my images.
 
-![Button colour contrast error](assets/readme-images/button-contrast-error.png)
-* Added aria labels to the links across the site to improve accessibility score.
-* Reduced image sizes to improve performance.
+My score in accessibility, best practices and SEO improved after all these changes. However due to improving the quality of the coffee menu image as it had suggested, the performance reduced slightly, but all now in the green:
 
-![Image size error](assets/readme-images/image-size-error.png)
-* Added meta description and author tags to all pages to improve SEO score.
-
-My score improved after all these changes:
-
-![CSS no errors screenshot](assets/readme-images/site-performance-after.png)
+  ![Final site performance](assets/readme-images/desktop-lighthouse-after.png)
 
 ### Mobile
 
-The same errors for desktop came up in mobile as well, but after the same tweaks, the performance came out as:
+The performance came out as:
 
-![Mobile site performance after](assets/readme-images/mobile-site-performance-after.png)
+![Mobile site performance after](assets/readme-images/mobile-lighthouse.png)
 
-* Performance on mobile could still be improved by reducing image sizes.
+* Performance on mobile could still be improved by reducing image sizes, but this is difficult to do when the images need to be large enough for larger screens in this particular instance.
 
 # Deployment
 
