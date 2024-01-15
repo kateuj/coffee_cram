@@ -329,7 +329,18 @@ footer {
     footer {
         font-size: 0.8rem;
     }
+
+    .modal-inner {
+        min-width: 280px;
+    }
+
+    #coffee-menu {
+        height: auto;
+        width: 80vw;
+        padding: 1%;
+    }
 }
+
 /* Contact Form */
 
 .contact-form {
