@@ -248,11 +248,15 @@ Here are some bugs I encountered and fixed as I went through the creation of my 
 
 * **Timer starting before the user clicks off the first pop-up**
   * I had to put the timer into a click function for the "Close" button
-* **Buttons in pop-ups not working**
 
+* **Buttons in pop-ups not working**
+  * The button to "Play Again" at the end of a game were not working see code snippet below:
+  ![Pop-up button issue code](assets/readme-images/pop-up-button-code-issue.png)
+  * Resolved by moving the function to within the openPopUpTime function, as I realised this would call the function in the right order after the "innerhtml" had been changed rather than before, which was why it was not working properly.
+  ![Pop-up button resolved code](assets/readme-images/pop-up-button-code-fix.png)
 
 ### Testing the Contact Form page
-* **Emailjs not feeding in parameters**
+* **Email JS not feeding in parameters**
   * Initially when putting together my email template and testing it with EmailJS, the message, email address and name were not pulling through into the email sent to my inbox.
   * Upon further inspection, I realised I needed to add parameters for each input into the JS file, which I had not been able to follow clearly in the Code Institute tutorial, but found the solution while looking at the emailJS tutorials on their site to resolve. 
 ![Send mail code](assets/readme-images/send-mail-code.png)
