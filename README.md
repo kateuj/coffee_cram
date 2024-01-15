@@ -225,7 +225,7 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ## Testing during Development
 
-* Throughout the process of making this website, I tested my code and CSS a lot using the preview window extension within VS Code, as well as within a chrome browser. With chrome browser I could Chrome Developer Tools to test responsiveness as well as troubleshoot any spacing issues or bugs.
+* Throughout the process of making this website, I tested my code using the preview window extension within VS Code and in the chrome browser. With chrome browser I could use Chrome Developer Tools troubleshoot any spacing issues in the CSS or Javascript bugs within the console log.
 * I would also consistently commit and push work to Github to then view live site and check responsiveness on my mobile and tablet devices, as well as passing onto friends and family to test on their devices.
 * I have also tested my site in the main browsers available, which include:
 
@@ -236,20 +236,32 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ### Testing the Home page
 
+Here are some bugs I encountered and fixed as I went through the creation of my site:
 
-* **Body content**
-  * I have used the Bootstrap grid system in my site to structure my pages, as I found it to be reliable to use in the Code Institute exercises for responsiveness. So, I tested this section with Chrome Developer Tools, editing with CSS and media queries to make sure responsiveness was suitable on all screen sizes.
-  * The portrait GIF in the centre was initially appearing under the nav bar on smaller screens when tested, so I resolved this by creating media queries for the smaller screen sizes to change the top margin above it where appropriate.
-  * The 3 images were impactful on the larger screens but from tablet screen-size downward, the two image on one line was enough, so I change my strategy in the end to make the third image disappear on smaller screens using a media query.
+* **Random drink generator section**
+  * Initially I had used "location.reload()" to reset the drink name section at the top of the page, which refreshed the page, meaning my score and order counters were not going up in score as they kept resetting with the page refresh.
+  * To fix, I created a separate function to get the randomized drink from the array, that is called through the variable "drinkName". Then, when it is called through the "playerWin()" function, it calls another drink without refreshing the page.
 
-* 
+* **Order count and Score count**
+  * Initially I tried out different code to get the order count and score count to increase with each correct answer but it did not work initially.
+  * After troubleshooting I rewrote my code so that each increase in points was written in a separate function and then called within the playerWin function, which allowed it to start the function when the playerWin function is triggered.
+
+* **Timer starting before the user clicks off the first pop-up**
+  * I had to put the timer into a click function for the "Close" button
+* **Buttons in pop-ups not working**
+
 
 ### Testing the Contact Form page
-
-
+* **Emailjs not feeding in parameters**
+  * Initially when putting together my email template and testing it with EmailJS, the message, email address and name were not pulling through into the email sent to my inbox.
+  * Upon further inspection, I realised I needed to add parameters for each input into the JS file, which I had not been able to follow clearly in the Code Institute tutorial, but found the solution while looking at the emailJS tutorials on their site to resolve. 
+![Send mail code](assets/readme-images/send-mail-code.png)
 
 ### Testing the Thank you page
-  * Successfully re-directs back to site after 5 seconds when tested.
+* Successfully re-directs back to site after 5 seconds when tested.
+
+### Unfixed bug
+* The only bug I could not fix, was that when in Gameplay, if the user clicks on the "How to play" button to view the Coffee Menu again, when they click off, the countdown timer appears to go twice as fast. It is something I intend to look into and fix in the future.
 
 ## Validator Testing
 
@@ -265,6 +277,8 @@ I put the CSS stylesheet through the Jigsaw Validator and found one Parse error.
 
 ![CSS error screenshot](assets/readme-images/css-validator-check.png)
 
+I corrected this error, as the syntax was incorrect for CSS.
+
 ## Lighthouse Performance Testing
 
 Using the Chrome Developer Tools Lighthouse reports, I was able to test the performance of my site pages and improve it as a result.
@@ -272,7 +286,7 @@ Using the Chrome Developer Tools Lighthouse reports, I was able to test the perf
 ### Desktop
 My initial desktop performance came out as below:
 
-  ![Initial site performance](assets/readme-images/initial-site-performance.png)
+  ![Initial site performance](assets/readme-images/desktop-lighthouse.png)
 
 To improve my score, I did the following:
 * Updated the coffee menu pop-up image to a higher res version.
@@ -289,6 +303,8 @@ The performance came out as:
 ![Mobile site performance after](assets/readme-images/mobile-lighthouse.png)
 
 * Performance on mobile could still be improved by reducing image sizes, but this is difficult to do when the images need to be large enough for larger screens in this particular instance.
+
+## JS Hint Testing
 
 # Deployment
 
