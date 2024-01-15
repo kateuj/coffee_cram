@@ -242,24 +242,14 @@ I chose a retro pixelated style font for headings and the logo for the game to a
   * The portrait GIF in the centre was initially appearing under the nav bar on smaller screens when tested, so I resolved this by creating media queries for the smaller screen sizes to change the top margin above it where appropriate.
   * The 3 images were impactful on the larger screens but from tablet screen-size downward, the two image on one line was enough, so I change my strategy in the end to make the third image disappear on smaller screens using a media query.
 
-* **Footer**
-  * An initial bug that I worked on, was a white space below the footer, which I checked over in Chrome Developer Tools initially but was still unsure as to the resolution. After doing some research, I found help at the following site for a simple piece of CSS code: [30 Seconds of Code](https://www.30secondsofcode.org/css/s/footer-at-the-bottom/#:~:text=This%20is%20done%20by%20setting,it%20and%20its%20previous%20sibling)
-  * I then tested all the links to make sure they worked and that the external links to social media accounts, opened new windows for the links when clicked on. This all worked effectively.
-  * The footer was not appearing vertically or horizontally centralised throughout the site, even though the styling was centred. Upon closer inspection in Chrome Developer Tools, I found a margin underneath the icons, as well as padding on the left. I tested a solution in the Developer Tools to cancel these out, found it to be successful and then proceeded to add it into my own CSS code.
-
-  ![Chrome Developer Tools footer debug](assets/readme-images/social-networks-footer-debug.png)
+* 
 
 ### Testing the Contact Form page
 
-* **Header**
-  * Testing showed that the headers throughout the site all consistently followed the styling CSS rule I had created for them.
-  
-* **Image Grid**
-  * When testing responsiveness of this section, I found that the right margin was not equal to the left, causing the image grid to not sit centrally on the page. After some trial and error, I put the image grid into a separate div container from the header, which resolved the issue.
+
 
 ### Testing the Thank you page
   * Successfully re-directs back to site after 5 seconds when tested.
-  * Tested responsiveness of text and GIF, all of which work effectively.
 
 ## Validator Testing
 
@@ -271,12 +261,11 @@ I ran my site pages through the W3C validator and I received one error for a mis
 I corrected the code and all three pages now return no html errors.
 
 ### CSS Jigsaw Validator
-I put the CSS stylesheet through the Jigsaw Validator and it returned no errors.
+I put the CSS stylesheet through the Jigsaw Validator and found one Parse error.
 
-![CSS no errors screenshot](assets/readme-images/validator-testing-no-errors.png)
+![CSS error screenshot](assets/readme-images/css-validator-check.png)
 
-
-## Performance Testing
+## Lighthouse Performance Testing
 
 Using the Chrome Developer Tools Lighthouse reports, I was able to test the performance of my site pages and improve it as a result.
 
@@ -390,5 +379,5 @@ Here is the live link to my website - <https://kateuj.github.io/coffee_cram/inde
 
 * Martina Terlevic my CI mentor, for her invaluable advice.
 * [Kera Cudmore](https://github.com/kera-cudmore/readme-examples/blob/main/README.md#italic-bold-and-code) for showing how to form a README file.
-* Liz my friend and fellow coder, for listening and offering suggestions when I was brainstorming logic and troubleshooting solutions.
+* Liz Curtis my friend and fellow coder, for listening and offering suggestions when I was brainstorming logic and troubleshooting solutions.
 * The big and little human beings of the Ulloa-James household who have been very patient with me, allowing me the time day or night to get my coding done.
