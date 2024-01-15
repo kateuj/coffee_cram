@@ -1,11 +1,16 @@
 // Drink name generation
 const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espresso', 'Double Espresso', 'Cappuccino'];
-
-function getDrinkName() {
-    return drinkNames[Math.floor(Math.random() * drinkNames.length)];
-};
-
+const correctDrinkNames = [];
 let drinkName = getDrinkName();
+
+//while loop
+function getDrinkName() {
+    let newDrink = drinkNames[Math.floor(Math.random() * drinkNames.length)];
+    while (correctDrinkNames.includes(newDrink)) {
+        newDrink = drinkNames[Math.floor(Math.random() * drinkNames.length)];
+    }
+    return newDrink;
+};
 
 $(document).ready(function () {
     $('#drink-random').text(`${drinkName}`);
@@ -91,7 +96,7 @@ function openPopUpTry() {
 function openPopUpTime() {
     modalPop.classList.add("open");
     document.getElementById("modal-inner").innerHTML = `<h2>You've run out of time!</h2>
-    <p>You scored: ${playerScore} and got the following answers correct ${drinkNames}</p>
+    <p>You scored: ${playerScore} and got the following answers correct ${correctDrinkNames.join(", ")}</p>
     <button id="close-modal-pop">Play again?</button>`;
     $("#close-modal-pop").click(function () {
         location.reload();
@@ -115,6 +120,7 @@ function playerWin() {
         increaseOrderCount();
         openPopUpWellDone();
         userString = '';
+        correctDrinkNames.push(drinkName);
         drinkName = getDrinkName();
         $('#drink-random').text(`${drinkName}`);
         $('#timer').text(`15`);
