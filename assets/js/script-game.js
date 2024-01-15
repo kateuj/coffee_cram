@@ -1,9 +1,8 @@
 // Drink name generation
-
 const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espresso', 'Double Espresso', 'Cappuccino'];
 
 function getDrinkName() {
-    return drinkNames[Math.floor(Math.random()*drinkNames.length)];
+    return drinkNames[Math.floor(Math.random() * drinkNames.length)];
 };
 
 let drinkName = getDrinkName();
@@ -12,44 +11,34 @@ $(document).ready(function () {
     $('#drink-random').text(`${drinkName}`);
 });
 
-
-// let i = 
-
-// for (let i = 0; i < shuffledArray.length; i++) {
-//     console.log(shuffledArray[i]);
-
-// };
-
-// function myFunction() {
-//     document.getElementById("drink-random").innerHTML = drinkNameIndex;
-//   };
-
+// Ingredient query selectors
 const espresso = document.querySelector('#espresso-ingredient');
 const doubleEspresso = document.querySelector('#double-espresso-ingredient');
 const steamedMilk = document.querySelector('#milk-ingredient');
 const chocolate = document.querySelector('#chocolate-ingredient');
 const water = document.querySelector('#water-ingredient');
+const foam = document.querySelector('#foam-ingredient');
 
-let divScore = document.querySelector("#player-score");
-let divOrderCount = document.querySelector("#order-count");
-
+// Drink ingredient sequence strings
 let americano = 'double espresso, water';
 let latte = 'double espresso, milk';
 let mocha = 'double espresso, chocolate, milk';
 let flatWhite = 'double espresso, milk';
 let cappuccino = 'espresso, milk, foam';
 
-//add loop for 10 goes to restart with alert and text with score on
-
 // Empty string generated for user ingredient clicks to make an ingredient list to check against the variable strings of each drink's mock up.
 let userString = '';
+
+// Progress counts - Score and Order counts
+let divScore = document.querySelector("#player-score");
+let divOrderCount = document.querySelector("#order-count");
 
 let playerScore = 0;
 let orderCount = 0;
 let timeRunOut = 0;
 
 function increasePlayerScore() {
-    playerScore+=10;
+    playerScore += 10;
     $('#player-score').text(`${playerScore}`);
 };
 
@@ -59,17 +48,18 @@ function increaseOrderCount() {
 };
 
 function decreasePlayerScore() {
-    playerScore-=5;
+    playerScore -= 5;
     $('#player-score').text(`${playerScore}`);
 };
 
-// Timer function to start when the user clicks off the first pop-up
-$('#openModal').click(function() {
+// Pause timer when user clicks on 'how to play' button to view coffee menu
+$('#openModal').click(function () {
     $('#timer').text(`Paused...`);
 });
 
-$('#closeModal').click(function() {
-        // Timer countdown for each question
+// Timer function to start when the user clicks off the first pop-up
+$('#closeModal').click(function () {
+    // Timer countdown for each question
     $('#timer').text(`15`);
     setInterval(function () {
         let div = document.querySelector("#timer");
@@ -85,54 +75,42 @@ $('#closeModal').click(function() {
 // Pop-up messages
 const modalPop = document.getElementById("modal-pop");
 
-// Try again
+// Try again pop-up
 function openPopUpTry() {
     modalPop.classList.add("open");
     document.getElementById("modal-inner").innerHTML = `<h2>Oops!</h2>
     <p>Try another ingredient. <br>
     Check the menu again if you need to!</p>`;
-    setTimeout(function(){
+    setTimeout(function () {
         $('#timer').text(`15`);
         modalPop.classList.remove("open");
-    },2000);
+    }, 2000);
 };
 
-// Run out of time
+// Run out of time pop-up
 function openPopUpTime() {
     modalPop.classList.add("open");
     document.getElementById("modal-inner").innerHTML = `<h2>You've run out of time!</h2>
     <p>You scored: ${playerScore} and got the following answers correct ${drinkNames}</p>
     <button id="close-modal-pop">Play again?</button>`;
-    $("#close-modal-pop").click(function(){
+    $("#close-modal-pop").click(function () {
         location.reload();
     });
 };
 
-// Correct answer
+// Correct answer pop-up
 function openPopUpWellDone() {
     modalPop.classList.add("open");
     document.getElementById("modal-inner").innerHTML = `<h2>Well Done!</h2>
     <p>You got it right!</p>`;
-    setTimeout(function(){
+    setTimeout(function () {
         modalPop.classList.remove("open");
-    },1500);
+    }, 1500);
 };
-
-function gameOver() {
-    modalPop.classList.add("open");
-    document.getElementById("modal-inner").innerHTML = `<h2>Game over</h2>
-    <p>You scored: ${playerScore} and got the following answers correct ${drinkNames}</p>
-    <button id="close-modal-pop">Play again?</button>`;
-    $("#close-modal-pop").click(function(){
-        location.reload();
-    });
-};
-
-
 
 //If player gets correct answer, runs below function
 function playerWin() {
-    setTimeout(function(){
+    setTimeout(function () {
         increasePlayerScore();
         increaseOrderCount();
         openPopUpWellDone();
@@ -140,21 +118,22 @@ function playerWin() {
         drinkName = getDrinkName();
         $('#drink-random').text(`${drinkName}`);
         $('#timer').text(`15`);
-    },1000);
+    }, 1000);
 };
 
+//If player clicks incorrect answer, runs below function
 function tryAgain() {
-    setTimeout(function(){
+    setTimeout(function () {
         openPopUpTry();
         userString = '';
         $('#timer').text(`15`);
         decreasePlayerScore();
-    },1000);
+    }, 1000);
 };
 
 
 // Click functions with if statements for each ingredient in the drawer. Each triggers the coffee cup image to change to reflect the user's choices or resets the level for incorrect answers.
-$('#espresso-ingredient').click(function() {
+$(espresso).click(function () {
     userString += 'espresso';
     if (drinkName == 'Single Espresso' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/single-espresso-cup.webp');
@@ -167,7 +146,7 @@ $('#espresso-ingredient').click(function() {
     };
 });
 
-$('#water-ingredient').click(function() {
+$(water).click(function () {
     userString += ', water';
     if (drinkName == 'Americano' && userString == americano) {
         $('#coffee-cup').attr('src', 'assets/images/americano.webp');
@@ -178,7 +157,7 @@ $('#water-ingredient').click(function() {
     };
 });
 
-$('#chocolate-ingredient').click(function() {
+$(chocolate).click(function () {
     userString += ', chocolate';
     if (drinkName == 'Mocha' && userString == 'double espresso, chocolate') {
         $('#coffee-cup').attr('src', 'assets/images/chocolate-cup.webp');
@@ -188,7 +167,7 @@ $('#chocolate-ingredient').click(function() {
     };
 });
 
-$('#milk-ingredient').click(function() {
+$(steamedMilk).click(function () {
     userString += ', milk';
     if (drinkName == 'Latte' && userString == latte) {
         $('#coffee-cup').attr('src', 'assets/images/latte.webp');
@@ -207,7 +186,7 @@ $('#milk-ingredient').click(function() {
     };
 });
 
-$('#double-espresso-ingredient').click(function() {
+$(doubleEspresso).click(function () {
     userString += 'double espresso';
     if (drinkName == 'Americano' && userString == 'double espresso') {
         $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
@@ -226,7 +205,7 @@ $('#double-espresso-ingredient').click(function() {
     };
 });
 
-$('#foam-ingredient').click(function() {
+$(foam).click(function () {
     userString += ', foam';
     if (drinkName == 'Cappuccino' && userString == cappuccino) {
         $('#coffee-cup').attr('src', 'assets/images/cappuccino.webp');
@@ -237,35 +216,7 @@ $('#foam-ingredient').click(function() {
     };
 });
 
-// let totalTime = 10;
-// let timeElapsed = 0;
-// let interval;
-
-// function stopTimer() {
-//     clearCount(count);
-//     location.reload();
-// };
-
-// function startTimer() {
-//     let div = document.querySelector("#timer");
-//     div.textContent = totalTime;
-//     interval = setInterval(function () {
-//         totalTime--;
-//         div.textContent = totalTime;
-//         if (totalTime >= 0) {
-//           stopTimer();
-//         }
-//      } , 1000);
-// };
-//   updateScore(function () {
-//     var divScore = document.querySelector("#player-score");
-//     playerScore+=10;
-//     divScore.textContent = playerScore;
-
-// });
-
-
 // Reset game
-$('#reset-button').click(function() {
+$('#reset-button').click(function () {
     location.reload('#drink-random');
 });
