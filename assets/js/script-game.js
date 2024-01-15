@@ -1,11 +1,17 @@
+// Drink name generation
+
 const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espresso', 'Double Espresso', 'Cappuccino'];
-// let shuffledArray = drinkNames.sort((a, b) => 0.5 - Math.random());
 
 function getDrinkName() {
     return drinkNames[Math.floor(Math.random()*drinkNames.length)];
 };
 
 let drinkName = getDrinkName();
+
+$(document).ready(function () {
+    $('#drink-random').text(`${drinkName}`);
+});
+
 
 // let i = 
 
@@ -34,11 +40,6 @@ let flatWhite = 'double espresso, milk';
 let cappuccino = 'espresso, milk, foam';
 
 //add loop for 10 goes to restart with alert and text with score on
-
-// Drink name generation
-$(document).ready(function () {
-    $('#drink-random').text(`${drinkName}`);
-});
 
 // Empty string generated for user ingredient clicks to make an ingredient list to check against the variable strings of each drink's mock up.
 let userString = '';
