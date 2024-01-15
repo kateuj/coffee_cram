@@ -235,11 +235,7 @@ I chose a retro pixelated style font for headings and the logo for the game to a
   * Microsoft Edge
 
 ### Testing the Home page
-* **Navigation Bar**
-  * First thing I tested was the nav bar to check all links worked correctly. I also checked the external link for 'Support' opened a new window, so as not to navigate the user away from my site completely.
-  * This nav bar is based on a responsive Bootstrap snippet available, which I edited to suit colour scheme and typeface, as well as background image.
-  * Getting the nav bar to be a suitable thickness for different screen sizes took some tweaking in CSS with media queries, cross-checking my edits in the VS code live preview to get it to look effective.
-  * Initially the background of the nav bar was not showing the same part of the image as the hero background behind as the screen size got smaller, but after trouble shooting, I found a simple fix was to put 'fixed' in the CSS for the nav bar background to have it move and reduce in the same way as the hero background.
+
 
 * **Body content**
   * I have used the Bootstrap grid system in my site to structure my pages, as I found it to be reliable to use in the Code Institute exercises for responsiveness. So, I tested this section with Chrome Developer Tools, editing with CSS and media queries to make sure responsiveness was suitable on all screen sizes.
@@ -253,27 +249,13 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
   ![Chrome Developer Tools footer debug](assets/readme-images/social-networks-footer-debug.png)
 
-### Testing the Portfolio page
+### Testing the Contact Form page
 
 * **Header**
   * Testing showed that the headers throughout the site all consistently followed the styling CSS rule I had created for them.
   
 * **Image Grid**
   * When testing responsiveness of this section, I found that the right margin was not equal to the left, causing the image grid to not sit centrally on the page. After some trial and error, I put the image grid into a separate div container from the header, which resolved the issue.
-
-### Testing the About page
-
-* **Text section**
-  * Through a lot of trial and error, I tested this page the most rigorously for responsiveness, as I found it to be the most complex content and layout-wise. I evaluated the paragraph text on smaller screens and found it to be too small to comfortably read, so I increased the font size with media queries for the smaller screens.
-  * I also found my line break element was not displaying central to the text when originally tested and I could not centralise it with CSS initially. However after researching it, I managed to solve this bug after learning about margin inline CSS rules at this site [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline).
-  * I also had an issue where the line break was appearing at a low opacity, which must have been a carried over style from the Bootstrap code in my site. To resolve this bug, I declared 100% opacity on the hr elements.
-
-* **Image and GIF**
-  * When tested on different screen sizes I had a lot of issues with the image and the GIF on this page not being responsive and causing there to be a large white margin on the right-hand side of the site and a horizontal scroll. I found the fix to this bug in the end to be setting the width of each to '50vh' on the desktop and tablet screens to keep it responsive and make sure it never caused an overhang.
-
-* **Contact Form**
-  * I based this form on the code we learnt in the 'Love Running' exercise I completed. Upon testing my styling, I found the margins to be too wide on smaller screens, which I sorted with a media query to reduce them in size.
-  * I tested the submit button to find that it does take the user to a thank-you and successfully re-direct back to site after 5 seconds.
 
 ### Testing the Thank you page
   * Successfully re-directs back to site after 5 seconds when tested.
@@ -282,24 +264,9 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 ## Validator Testing
 
 ### W3C Validator
-I ran my site pages through the W3C validator and I received multiple errors. These included:
+I ran my site pages through the W3C validator and I received one error for a missing alt tag for an image on my index page. 
 
-* 'Trailing slash on void elements' on all pages, where some elements in the header had unnecessary slashes at the end of their tags.
-
-![Trailing Slash screenshot](assets/readme-images/validator-testing-1.png)
-* Remove sections, just use DIVs when the content did not include headers.
-
-![Headers error screenshot](assets/readme-images/validator-testing-3.png)
-* Needed to move a paragraph end tag above the "hr" element on the Index page.
-
-![End tag error screenshot](assets/readme-images/validator-testing-2.png)
-* Had a stray end div on the Portfolio page.
-
-![Stray end tag screenshot](assets/readme-images/validator-testing-4.png)
-* Unclosed div elements, which I resolved by adding in end tags.
-
-![Unclosed div element error screenshot](assets/readme-images/validator-testing-5.png)
-* JavaScript placement was causing an error, as it was placed after the body tag, so needed to move to inside body tag to resolve the issue.
+![Unclosed div element error screenshot](assets/readme-images/w3c-validator-check.png)
 
 I corrected the code and all three pages now return no html errors.
 
@@ -372,12 +339,12 @@ To create a fork:
 6. Type "git clone" into the terminal, and then paste the URL you copied and click enter.
 7. This should have created a local clone of the repository.
 
-Here is the live link to my website - <https://kateuj.github.io/kate-brush-portfolio/index.html>
+Here is the live link to my website - <https://kateuj.github.io/coffee_cram/index.html>
 
 # Languages
 
-* I used HTML and CSS to create this site.
-* Bootstrap v5.3.2 was used and built upon for features such as the responsive navigation bar and page layout.
+* I used HTML, CSS and Javascript to create this site.
+* Bootstrap v5.3.2 was used and built upon for creating the general layout with its grid system.
 
 # Media Queries
 
@@ -387,9 +354,11 @@ Here is the live link to my website - <https://kateuj.github.io/kate-brush-portf
 
 * I used Visual Studio Code to create, edit, preview and push my code to my Github repository.
 * Git and Github for version control.
-* I used Procreate for my sketches, planning and design work, as well for producing the logo, hero background image and both animated GIFs on the site.
+* I used Procreate for my graphics, planning and design work.
+* Balsamiq for wireframes.
 * Figma was used as a design board to lay out my wireframes and keep a copy of my design thought process all in one place.
 * Adobe Photoshop was used to create visual mock-ups for this document, as well as reformatting all my images as .webp files to reduce file size and in turn improve the performance of my site.
+* EmailJS was used in the background to help me create a functional contact form.
 
 # Code
 
@@ -423,14 +392,5 @@ Here is the live link to my website - <https://kateuj.github.io/kate-brush-portf
 
 * Martina Terlevic my CI mentor, for her invaluable advice.
 * [Kera Cudmore](https://github.com/kera-cudmore/readme-examples/blob/main/README.md#italic-bold-and-code) for showing how to form a README file.
-* Liz for listening and offering suggestions when I was brainstorming logic and troubleshooting solutions.
+* Liz my friend and fellow coder, for listening and offering suggestions when I was brainstorming logic and troubleshooting solutions.
 * The big and little human beings of the Ulloa-James household who have been very patient with me, allowing me the time day or night to get my coding done.
-
-
-
-
-bugs
-random drink not refresh page
-update order count and score
-emailjs not feeding in parameter - added in js script to fix
-when how to play click the timer gets quicker
