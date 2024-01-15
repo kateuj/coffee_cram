@@ -136,6 +136,8 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ![Home page screenshot](assets/readme-images/home-page-screenshot.png)
 
+* To keep things clear I have sectioned out the page, so that the ingredients are on the left and the coffee drink is on the right to be created and filled up by the user. In mobile and tablet, the cup appears at the top with the ingredients at the bottom so the user instinctively reads the drink name first, sees the cup to fill and then proceeds to the ingredients to make choices.
+
 ### Instructions pop-up
 
 ![Game instructions pop-up screenshot](assets/readme-images/game-pop-up-screenshot.png)
@@ -146,77 +148,78 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ![Drink title generator screenshot](assets/readme-images/random-drink-generator.png)
 
+* This title prints a random drink from an array in the script-game.js file.
+* I would like to iterate this code to get it to a stage where it will stop the same drink appearing twice consecutively. 
+
+![Javascript code for drink name generator screenshot](assets/readme-images/drink-name-random-code.png)
+
 ### Ingredient text overlays
 
 ![Ingredient with hover overlays screenshot](assets/readme-images/ingredient-drawer-image-overlays.png)
+
+* When the user clicks on an ingredient in the mobile version, or hovers over in the desktop version, the name of ingredient appears as a text overlay over the graphic. I felt this was intuitive for the user and also maintained the minimalist visual due to there not being an overload of text on the page.
 
 ### Changing coffee cup graphic
 
 ![Coffee cup graphic screenshot](assets/readme-images/coffee-cup-change.png)
 
+* The coffee cup image changes if the correct ingredient is clicked for the drink name that has been generated at the top of the page. It go through each step, gradually filling up with each ingredient until the drink is complete.
+
 ### Timer, score count and order count
 
 ![Timer, score count and order count screenshot](assets/readme-images/timer-and-counts.png)
+
+* Each drink gets a 15 second timer for the user to guess the ingredient sequence correctly. For every incorrect ingredient clicked, the player loses 5 points in their score, and for every correctly guessed drink sequence, they get 10 points. The order count also keeps track of how many drinks have been successfully completed so far.
 
 ### Try again pop-up
 
 ![Try again pop-up screenshot](assets/readme-images/try-again-pop-up.png)
 
+* For each incorrect ingredient clicked, a timed pop-up appears prompting the user to try again and check the how to play section if unsure.
+
 ### Well done pop-up
 
 ![Well done pop-up screenshot](assets/readme-images/well-done-pop-up.png)
+
+* A well done pop-up appears for every correct sequence completed so the user knows the game has progressed and they are moving onto the next drink.
 
 ### Footer
 
 ![Footer screenshot](assets/readme-images/footer.png)
 
-* I have included links to my social media profiles - TikTok, Instagram, Patreon within my footer.
-* They are the standard recognisable icons for each, so easily recognisable by the user.
-* The links all open in separate windows so that the user does not lose the site in their browser and have to manually navigate back, which again is all part of creating a positive, easy user experience for them.
-* I have also added a contact icon for those who know they want to contact me as soon as they land on my website. Link directs them to my About page with contact form available.
+* I have included links to my Instagram profile in the footer along with an icon that links to the contact form page. This way if the user is more driven by icons than text, they will instinctively know to click the email icon to get in touch, versus the users who might be encouraged or prompted to contact from the text and 'click here' link I have included within the footer too.
+* The external link to Instagram opens a separate window, whereas the internal link to my contact form redirects to the contact page within the same window, which is good practice when designing a user journey and saves several windows opening for the user for the same website.
 
 ## Get in touch page
 
 ![Get in touch screenshot](assets/readme-images/contact-page.png)
 
-* Using the Bootstrap Grid system, I created a responsive image gallery to showcase my work on my Portfolio page.
+* I have included a functional contact form created using emailjs for users to contact me.
 
 ### Contact Form
 
 ![Contact Form screenshot](assets/readme-images/contact-form.png)
 
+* All inputs are required
+* The contact form checks the information is suitable before sending - the email input will not work with text, an email address must be added for the form to submit.
+
 ## Thank you page
 
 ![Thank you re-direct page screenshot](assets/readme-images/thank-you-page.png)
+
+* A quick message to the user to confirm their message has been submitted and to redirect them back to the game page within 5 seconds.
 
 ## Error 404 page
 
 ![Error 404 page screenshot](assets/readme-images/error-404-page.png)
 
-
-
-* To ensure that users can contact me for potential future projects etc. I have included a contact form on my About page. It is fully responsive, changing size to suit screen size.
-* It is also in keeping with the colour scheme of the site using CSS to maintain consistency and professionalism across the site.
-* Once the user has submitted their form, they are re-directed to a thank-you page to assure them their form has been submitted. They are then, re-directed back to the site after 5 seconds for a positive user experience by anticipating their needs. 
+* Should any errors occur, the user will be directed to this page. I have included this page in the sendmail js file function, should the form not successfully submit. The page has a button that links back to the game page, so the user can return back to the main site easily and quickly.
 
 ## Possible Future Features
 
-### Interactive Portfolio Gallery
-* I would like to add JavaScript to the portfolio page to allow users to click on the images and get an embedded pop up of the image full screen, with a title and blurb included with each. This would give a bit more context to the pieces and allow users to view them in more depth if required.
-
-### Announcement Bar
-* An announcement bar that sat above the navigation bar would be desirable to bring to the attention of any user if there have been any updates to the site, for example, new artwork available to view.
-
-### A Print Shop
-
-* An online shop where users could buy any of the artwork as a digital or physical print.
-
-### Animated Hero Background
-
-* I attempted a gently scrolling background animation for the Home page but unfortunately I could not get it to function at a standard I was happy with, so in future, I would like to revisit this, as I feel it would have added something to the visual impact of the Home page.
-
-### Live Instagram Feed
-* In the future I would love to add a live Instagram feed on my portfolio page to show the most up to date artwork, as well as giving the users a feel for who I am, to make me more approachable for users.
+* Background music for ambience
+* Confetti animation when the user guesses the correct sequence
+* More drink variations
 
 # Testing
 
@@ -389,11 +392,12 @@ Here is the live link to my website - <https://kateuj.github.io/kate-brush-portf
 * Adobe Photoshop was used to create visual mock-ups for this document, as well as reformatting all my images as .webp files to reduce file size and in turn improve the performance of my site.
 
 # Code
-* **Navigation Bar** - I tailored this [Bootstrap code](https://getbootstrap.com/docs/5.0/components/navbar/) snippet to create my Navigation bar.
 
-![Bootstrap Navigation Bar code snippet](assets/readme-images/bootstrap-navbar-code-snippet.png)
+* **Text overlay on ingredients** - I followed this tutorial and tailored it to my own style and needs [Text image overlays](https://www.youtube.com/watch?v=Qt-70hrdJZI&ab_channel=LearnWeb)
 
-* **Contact form** - this was based on the code used in the 'Love Running' exercise of Code Institute.
+* **Modal pop-ups** - I followed this tutorial to create my pop-ups and tailored it to my own needs [Pop-ups in Javascript](https://www.youtube.com/watch?v=r_PL0K2fGkY&ab_channel=FlorinPop)
+
+* **Contact form** - this was based on the code used in the 'Putting it all together' emailJS exercises of Milestone 2 on Code Institute.
 
 * **Footer** - code is based on the code used in the 'Love Running' exercise of Code Institute.
 
@@ -407,26 +411,21 @@ Here is the live link to my website - <https://kateuj.github.io/kate-brush-portf
 # Credits
 
 * Code Institute Bootstrap lessons helped me with working out how to use the Bootstrap grid layout on my pages.
-* Google fonts for ['Josefin Slab' typography.](https://fonts.google.com/specimen/Josefin+Slab)
+* Google fonts for ['Silkscreen' typography.](https://fonts.google.com/specimen/Silkscreen) and ['Rubik' typography.](https://fonts.google.com/specimen/Rubik)
 
 ## Content
 
 * [Image for visual mock up at top of README document by CosmoStudio</a> on Freepik.](https://www.freepik.com/psd/desktop-tablet-phone-mockup)
-* All illustrations, animated GIFs and images are my own work under my pseudonym 'Kate Brush'.
+* All graphics are my own work.
 
 
 ### Thanks
 
-* [Harsivo Edu](https://www.youtube.com/watch?v=lYiE5lBS13E&ab_channel=HarsivoEdu) for teaching me how to set up VS Code.
 * Martina Terlevic my CI mentor, for her invaluable advice.
 * [Kera Cudmore](https://github.com/kera-cudmore/readme-examples/blob/main/README.md#italic-bold-and-code) for showing how to form a README file.
-* The big and little human beings of the Ulloa-James household who have been very patient with me, allowing me the time day or night to focus on this project.
+* Liz for listening and offering suggestions when I was brainstorming logic and troubleshooting solutions.
+* The big and little human beings of the Ulloa-James household who have been very patient with me, allowing me the time day or night to get my coding done.
 
-
-
-https://www.youtube.com/watch?v=Qt-70hrdJZI&ab_channel=LearnWeb text overlay for images
-
-https://stackoverflow.com/questions/23645439/add-time-delay-to-javascript-popup delay time out function
 
 
 
@@ -434,7 +433,4 @@ bugs
 random drink not refresh page
 update order count and score
 emailjs not feeding in parameter - added in js script to fix
-https://www.youtube.com/watch?v=r_PL0K2fGkY&ab_channel=FlorinPop
 when how to play click the timer gets quicker
-
-https://www.youtube.com/watch?v=r_PL0K2fGkY&ab_channel=FlorinPop
