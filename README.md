@@ -136,47 +136,68 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ![Home page screenshot](assets/readme-images/home-page-screenshot.png)
 
-### Instructions Pop-Up
+### Instructions pop-up
 
 ![Game instructions pop-up screenshot](assets/readme-images/game-pop-up-screenshot.png)
 
 * I created an animated gif for the centre of the landing page to add to the initial visual impact of the site to draw users in. I have kept it in a hand-drawn style to keep it fun and intriguing for a younger audience and to get my own personality across to the user to make it feel more casual and relatable.
 
+### Random drink generator
+
+![Drink title generator screenshot](assets/readme-images/random-drink-generator.png)
+
+### Ingredient text overlays
+
+![Ingredient with hover overlays screenshot](assets/readme-images/ingredient-drawer-image-overlays.png)
+
+### Changing coffee cup graphic
+
+![Coffee cup graphic screenshot](assets/readme-images/coffee-cup-change.png)
+
+### Timer, score count and order count
+
+![Timer, score count and order count screenshot](assets/readme-images/timer-and-counts.png)
+
+### Try again pop-up
+
+![Try again pop-up screenshot](assets/readme-images/try-again-pop-up.png)
+
+### Well done pop-up
+
+![Well done pop-up screenshot](assets/readme-images/well-done-pop-up.png)
+
 ### Footer
 
-![Footer screenshot](assets/readme-images/)
+![Footer screenshot](assets/readme-images/footer.png)
 
 * I have included links to my social media profiles - TikTok, Instagram, Patreon within my footer.
 * They are the standard recognisable icons for each, so easily recognisable by the user.
 * The links all open in separate windows so that the user does not lose the site in their browser and have to manually navigate back, which again is all part of creating a positive, easy user experience for them.
 * I have also added a contact icon for those who know they want to contact me as soon as they land on my website. Link directs them to my About page with contact form available.
 
-## Portfolio page
+## Get in touch page
 
-![Portfolio page screenshot](assets/readme-images/portfolio-page-screenshot.jpg)
-
-### Image Gallery
-
-![Gallery screenshot](assets/readme-images/gallery-screenshot.jpg)
+![Get in touch screenshot](assets/readme-images/contact-page.png)
 
 * Using the Bootstrap Grid system, I created a responsive image gallery to showcase my work on my Portfolio page.
 
-## About page
-
-![About page screenshot](assets/readme-images/about-page-screenshot.jpg)
-
 ### Contact Form
 
-![Contact Form screenshot](assets/readme-images/contact-form-screenshot.png)
+![Contact Form screenshot](assets/readme-images/contact-form.png)
+
+## Thank you page
+
+![Thank you re-direct page screenshot](assets/readme-images/thank-you-page.png)
+
+## Error 404 page
+
+![Error 404 page screenshot](assets/readme-images/error-404-page.png)
+
+
 
 * To ensure that users can contact me for potential future projects etc. I have included a contact form on my About page. It is fully responsive, changing size to suit screen size.
 * It is also in keeping with the colour scheme of the site using CSS to maintain consistency and professionalism across the site.
 * Once the user has submitted their form, they are re-directed to a thank-you page to assure them their form has been submitted. They are then, re-directed back to the site after 5 seconds for a positive user experience by anticipating their needs. 
-
-## Thank you page
-
-![Thank you page screenshot](assets/readme-images/thank-you-page-screenshot.png)
-* Users are directed to this page when they submit a contact form. It re-directs back to site after 5 seconds. 
 
 ## Possible Future Features
 
