@@ -85,7 +85,7 @@ a:hover {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     padding: 15px 25px;
     text-align: center;
-    width: 380px;
+    min-width: 380px;
 }
 
 .modal-inner h2 {
@@ -101,6 +101,11 @@ a:hover {
 .pop-up-button {
     margin: auto;
     text-align: center;
+}
+
+#coffee-menu {
+    height: 60vh;
+    padding: 1%;
 }
 
 /* Text image overlays */
