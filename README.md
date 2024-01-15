@@ -3,7 +3,7 @@
 For my Milestone 2 project I have created a barista simulation game in javascript. The game randomly generates a drink name for the user to then select the correct ingredients to create that particular drink.
 I wanted to create something fun that could potentially be used as a tool for users to brush up on their coffee drink knowledge, perhaps even during a training setting as an ice-breaker exercise. As in my previous project, I have proceeding with the mobile first' design technique to ensure my game can be accessed on the go on mobiles and tablets, not just on laptops and computers, so the site is fully responsive.
 
-![Screen mock-ups of Coffee Cram website](assets/readme-images/)
+![Screen mock-ups of Coffee Cram website](assets/readme-images/mock-up-picture-coffee-cram.png)
 
 
 [Link to Coffee Cram live site](https://kateuj.github.io/coffee-cram/index.html)
@@ -80,15 +80,15 @@ All of the above, I have reflecting in the design of my own website.
 
 I used Figma and Procreate to plan and design my wireframes and user journey. Figma has been really useful to use as a design board to hold all my inspiration and planning visually in one place. I initially designed the wireframe for my site on mobile first as planned, then proceeded to design desktop wireframes and plan out the user journey and navigation around the site.
 
-#### Mobile Design Wireframe Sketch
+#### Mobile Design Wireframe
 
 ![mobile design wireframe](assets/readme-images/mobile-wireframes.png)
 
-#### Tablet Design Wireframe Sketch
+#### Tablet Design Wireframe
 
 ![tablet design wireframe](assets/readme-images/tablet-wireframes.png)
 
-#### Desktop Design Wireframe Sketch
+#### Desktop Design Wireframe
 
 ![desktop design wireframe](assets/readme-images/desktop-wireframes.png)
 
@@ -105,7 +105,7 @@ I went for a mix of warm and cool tones to ensure good colour readability contra
 
 Running with the theme of adding personality to my site, as well as finding a typeface that didn't look too corporate alongside my handwritten logo, I went for a serif font to create a classic, nostalgic look. I will need to ensure that font-size is large enough in mobile version to ensure good readability. 
 
-![Josefin slab typeface](assets/readme-images/josefin-slab-typeface.png)
+![Josefin slab typeface](assets/readme-images/fonts.png)
 
 # Features #
 
@@ -120,7 +120,7 @@ Running with the theme of adding personality to my site, as well as finding a ty
 ![Favicon screenshot](assets/readme-images/favicon-screenshot.png)
 
 ### Logo
-![Logo in navigation bar](assets/readme-images/logo-in-navbar.png)
+![Logo in navigation bar](assets/readme-images/logo.png)
 
 * I created my logo using Procreate.
 * The process involved handwriting it, then creating a clipping mask with it, to then colour with a gradient to give it a bit more depth.
