@@ -171,13 +171,13 @@ a:hover {
 }
 
 .drawer-layout {
-    &:hover {
-        opacity: 0.4;
-    }
-
     display: block;
     position: relative;
     cursor: pointer;
+}
+
+.drawer-layout:hover {
+    opacity: 0.4;
 }
 
 .drawer-image {
