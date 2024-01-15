@@ -6,7 +6,7 @@ I wanted to create something fun that could potentially be used as a tool for us
 ![Screen mock-ups of Coffee Cram website](assets/readme-images/mock-up-picture-coffee-cram.png)
 
 
-[Link to Coffee Cram live site](https://kateuj.github.io/coffee-cram/index.html)
+[Link to Coffee Cram live site](https://kateuj.github.io/coffee_cram/)
 
 ## Table of Contents
 
@@ -43,8 +43,9 @@ Broadly, the game is aimed at anyone with an interest in coffee, which could inc
 * Build responsive game that works on mobile, tablet and desktop.
 * Make the game easy to use with rules explained.
 * Easy to navigate around and find key information.
+* The option to view instructions anytime, to help the user revise the ingredients for each drink and refresh their memory easily.
 * A good UI site flow.
-* Provide the users with a way of contacting me.
+* Provide the users with a way of contacting me and submitting a message to my email inbox.
 * To be accessible for screen readers.
 * To be able to reset the game easily.
 * Links to the creator's social media in footer.
@@ -78,7 +79,7 @@ All of the above, I have reflecting in the design of my own website.
 
 ### Wireframes
 
-I used Figma and Procreate to plan and design my wireframes and user journey. Figma has been really useful to use as a design board to hold all my inspiration and planning visually in one place. I initially designed the wireframe for my site on mobile first as planned, then proceeded to design desktop wireframes and plan out the user journey and navigation around the site.
+I used Figma and Balsamiq to plan and design my wireframes and user journey. I like using Figma in particular because it always you to brainstorm and keep all ideas and inspiration in one place as a singular visual to refer back to, which has been very useful throughout the project. I designed my site in mobile format initially before moving onto bigger screens, to ensure responsiveness was considered, especially since most users will predominantly use their phones to access this game.
 
 #### Mobile Design Wireframe
 
@@ -96,16 +97,22 @@ I used Figma and Procreate to plan and design my wireframes and user journey. Fi
 
 ### Colour Scheme
 
-As explained in my target audience research, I wanted to make sure that the colour used in the site was bright and feminine in aesthetic to appeal to a predominantly age 25-34, female audience, which incidentally is the demographic I fall into myself, so I felt it best conveyed my style and personality, which is always important to convey when showcasing any work based on my experience in the industry.
-I went for a mix of warm and cool tones to ensure good colour readability contrast is always achieved, which is important when considering the design of a site from an accessibility point of view.
+After looking at coffee based content, branding and cafe simulator games, I found a lot of them to have quite muted, bland colour palettes, due to coffee being brown and having to work with that colour predominantly. However I was adamant to make this game as visually exciting as possible, so I looked at retro game palettes as well as bright 'vaporwave' colours to form my own striking colour palette to engage the user. The retro look and feel was intentional to invoke a cosy, reminiscent experience for users.
+I made sure I had a good mix of high contrasting colours for good readability, which I have learn is important to consider when designing a website or application to ensure inclusivity for all users.
 
 ![Colour Scheme](assets/readme-images/colour-palette.png)
 
+### Graphics
+
+I was conscious that with 6 different ingredients and over 6 different variations of drinks, that this game could end up looking visually confusing if not approached carefully. I chose to create simple, isometric, flat graphics, which are in-keeping with the retro feel, but also creating a minimalist look and feel to keep the game approachable and not too overwhelming for the user.
+
+![Coffee Cup Graphic](assets/readme-images/cappuccino.png)
+
 ### Typography
 
-Running with the theme of adding personality to my site, as well as finding a typeface that didn't look too corporate alongside my handwritten logo, I went for a serif font to create a classic, nostalgic look. I will need to ensure that font-size is large enough in mobile version to ensure good readability. 
+I chose a retro pixelated style font for headings and the logo for the game to accentuate the retro feel of the game, but also coupled it with Rubik, a simple, easy to read sans-serif font, for any body text sentences etc. to maintain good readability and in turn a good user experience.
 
-![Josefin slab typeface](assets/readme-images/fonts.png)
+![Typefaces used](assets/readme-images/fonts.png)
 
 # Features #
 
@@ -127,20 +134,10 @@ Running with the theme of adding personality to my site, as well as finding a ty
 * An earlier version did not have the gradient on the letters, which felt a bit flat, so I explored ways to make it more dynamic such as colours changes, before making the decision to add a gradient on it.
 * I added hand-drawn embellishments to it, similar to what I seen done on logo in my research of other sites.
 
-### Navigation Bar
-
-![Desktop Navbar screenshot](assets/readme-images/desktop-navbar-screenshot.png)
-![Mobile Navbar screenshot](assets/readme-images/mobile-navbar-screenshot.png)
-
-* I made sure to create a fully responsive navbar for this site so it could be used with ease for all screen sizes especially mobile, as this is most likely how the site will be viewed mostly.
-* As screen size reduces the navbar intuitively turns into a collapsible toggler button at the top right corner of the screen.
-* The logo for the site consistently stays on the top left corner of the screen. It is linked to the Home page to make navigating there easier for the user.
-* I wanted to make sure from a user journey perspective that the navigation was intuitive and that they user could get to anywhere on the site within 2 or less clicks for ease and positive user experience.
-* The colours of the navigation links change as they are hovered over too, to emphasise that they are calls to action. This again aesthetically gives a positive user experience.
-
-## Home page
+## Game page
 
 ![Home page screenshot](assets/readme-images/home-page-screenshot.jpg)
+
 ### Hero Portrait Animated GIF
 
 ![Hero Portrait GIF screenshot](assets/readme-images/hero-portrait-screenshot.png)
