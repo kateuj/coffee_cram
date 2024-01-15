@@ -80,6 +80,7 @@ All of the above, I have reflecting in the design of my own website.
 ### Wireframes
 
 I used Figma and Balsamiq to plan and design my wireframes and user journey. I like using Figma in particular because it always you to brainstorm and keep all ideas and inspiration in one place as a singular visual to refer back to, which has been very useful throughout the project. I designed my site in mobile format initially before moving onto bigger screens, to ensure responsiveness was considered, especially since most users will predominantly use their phones to access this game.
+I have changed a features along the way after considering user experience, for instance, I chose not to add a drop down menu at the top of the mobile version due to the site only being two pages long and felt it unnecessary in the end, due to the link to the contact page being below the game. If I had included an accordion nav bar at the top it would have pushed the game content further down the screen, meaning the user may need to scroll to see all the ingredients, which I decided was not acceptable for a good user experience.
 
 #### Mobile Design Wireframe
 
@@ -120,33 +121,30 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ### General
 
-* I have made the site responsive, so it can be viewed and used effectively on all screen sizes down to 320px width by 480px height.
-* I have made sure that readability contrast has been taken into consideration with all my design work and use of text within the site.
-* Favicon page tab icons have been added to each page to make the page look more professional.
+* My site is fully responsive and can be viewed and used effectively on all screen sizes down to 320px width by 480px height.
+* I have considered readability contrast carefully for all visual elements.
+* I have included a Favicon page tab icon to make the page look professional and consistent.
 
 ![Favicon screenshot](assets/readme-images/favicon-screenshot.png)
 
 ### Logo
 ![Logo in navigation bar](assets/readme-images/logo.png)
 
-* I created my logo using Procreate.
-* The process involved handwriting it, then creating a clipping mask with it, to then colour with a gradient to give it a bit more depth.
-* An earlier version did not have the gradient on the letters, which felt a bit flat, so I explored ways to make it more dynamic such as colours changes, before making the decision to add a gradient on it.
-* I added hand-drawn embellishments to it, similar to what I seen done on logo in my research of other sites.
+* I created my simple text logo using the Silkscreen font to give it the retro gaming feel.
 
 ## Game page
 
-![Home page screenshot](assets/readme-images/home-page-screenshot.jpg)
+![Home page screenshot](assets/readme-images/home-page-screenshot.png)
 
-### Hero Portrait Animated GIF
+### Instructions Pop-Up
 
-![Hero Portrait GIF screenshot](assets/readme-images/hero-portrait-screenshot.png)
+![Game instructions pop-up screenshot](assets/readme-images/game-pop-up-screenshot.png)
 
 * I created an animated gif for the centre of the landing page to add to the initial visual impact of the site to draw users in. I have kept it in a hand-drawn style to keep it fun and intriguing for a younger audience and to get my own personality across to the user to make it feel more casual and relatable.
 
 ### Footer
 
-![Footer screenshot](assets/readme-images/footer-screenshot.png)
+![Footer screenshot](assets/readme-images/)
 
 * I have included links to my social media profiles - TikTok, Instagram, Patreon within my footer.
 * They are the standard recognisable icons for each, so easily recognisable by the user.
