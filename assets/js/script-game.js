@@ -36,8 +36,8 @@ let cappuccino = 'espresso, milk, foam';
 let userString = '';
 
 // Progress counts - Score and Order counts
-let divScore = document.querySelector("#player-score");
-let divOrderCount = document.querySelector("#order-count");
+let divScore = document.querySelector('#player-score');
+let divOrderCount = document.querySelector('#order-count');
 
 let playerScore = 0;
 let orderCount = 0;
@@ -68,7 +68,7 @@ $('#closeModal').click(function () {
     // Timer countdown for each question
     $('#timer').text(`15`);
     setInterval(function () {
-        let div = document.querySelector("#timer");
+        let div = document.querySelector('#timer');
         let count = div.textContent * 1 - 1;
         div.textContent = count;
         if (count <= 0) {
@@ -79,38 +79,38 @@ $('#closeModal').click(function () {
 });
 
 // Pop-up messages
-const modalPop = document.getElementById("modal-pop");
+const modalPop = document.getElementById('modal-pop');
 
 // Try again pop-up
 function openPopUpTry() {
-    modalPop.classList.add("open");
-    document.getElementById("modal-inner").innerHTML = `<h2>Oops!</h2>
+    modalPop.classList.add('open');
+    document.getElementById('modal-inner').innerHTML = `<h2>Oops!</h2>
     <p>Try another ingredient. <br>
     Check the menu again if you need to!</p>`;
     setTimeout(function () {
         $('#timer').text(`15`);
-        modalPop.classList.remove("open");
+        modalPop.classList.remove('open');
     }, 2000);
 };
 
 // Run out of time pop-up
 function openPopUpTime() {
-    modalPop.classList.add("open");
-    document.getElementById("modal-inner").innerHTML = `<h2>You've run out of time!</h2>
-    <p>You scored: ${playerScore} and got the following answers correct ${correctDrinkNames.join(", ")}</p>
-    <button id="close-modal-pop">Play again?</button>`;
-    $("#close-modal-pop").click(function () {
+    modalPop.classList.add('open');
+    document.getElementById('modal-inner').innerHTML = `<h2>You've run out of time!</h2>
+    <p>You scored: ${playerScore} and got the following answers correct ${correctDrinkNames.join(', ')}</p>
+    <button id='close-modal-pop'>Play again?</button>`;
+    $('#close-modal-pop').click(function () {
         location.reload();
     });
 };
 
 // Correct answer pop-up
 function openPopUpWellDone() {
-    modalPop.classList.add("open");
-    document.getElementById("modal-inner").innerHTML = `<h2>Well Done!</h2>
+    modalPop.classList.add('open');
+    document.getElementById('modal-inner').innerHTML = `<h2>Well Done!</h2>
     <p>You got it right!</p>`;
     setTimeout(function () {
-        modalPop.classList.remove("open");
+        modalPop.classList.remove('open');
     }, 1500);
 };
 
