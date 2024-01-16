@@ -109,7 +109,7 @@ function openPopUpTry() {
     setTimeout(function () {
         time = 16;
     }, 1000);
-    
+
 }
 
 // Run out of time pop-up with text variations depending on user performance
@@ -210,7 +210,7 @@ function tryAgain() {
     Each triggers the coffee cup image to change to reflect the user's 
     choices or resets the level for incorrect answers.
 */
-    $(espresso).click(function () {
+$(espresso).click(function () {
     userString += 'espresso';
     if (drinkName == 'Single Espresso' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/single-espresso-cup.webp');
