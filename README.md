@@ -271,68 +271,68 @@ When looking to approach testing for this project, I considered when is best to 
 I made sure whilst in development phase and implementation phase I was regularly testing all the interactive elements on my page. On my home page, this included:
 
 * Pop-up 'Close' button
-  * Expected: Intro pop-up to close and the timer to start from 15
-  * Tested: Click on the 'Close' button
-  * Result: Pop-up closed but the timer did not start from 15, it had started on page load
-  * Action: Examined the code and re-wrote the timer function code, using true and false states to manage when the timer would start and pause (explained in more detail below [Timer Issues](#timer-issues))
+  * **Expected:** Intro pop-up to close and the timer to start from 15
+  * **Tested:** Click on the 'Close' button
+  * **Result:** Pop-up closed but the timer did not start from 15, it had started on page load
+  * ****Action:**** Examined the code and re-wrote the timer function code, using true and false states to manage when the timer would start and pause (explained in more detail below [Timer Issues](#timer-issues))
 
 * Pop-up 'Play Again' button
-  * Expected: Button to refresh the page
-  * Tested: Let the timer run out and the pop-up to appear, then click on the 'Play Again' button
-  * Result: Pop-up not closing or refreshing the page
-  * Action: Moving the function to within the openPopUpTime function (explained in more detail below [Buttons in pop-ups](#buttons-in-pop-ups-not-working))
+  * **Expected:** Button to refresh the page
+  * **Tested:** Let the timer run out and the pop-up to appear, then click on the 'Play Again' button
+  * **Result:** Pop-up not closing or refreshing the page
+  * **Action:** Moving the function to within the openPopUpTime function (explained in more detail below [Buttons in pop-ups](#buttons-in-pop-ups-not-working))
 
 * Interactive ingredients
-  * Expected: The ingredient name should appear as an overlay on the ingredient disc when hovered over and cause an action when clicked - either trigger the coffee cup image to change if it is correct, or if it is an incorrect guess it should trigger a try again message
-  * Tested: Rolled mouse over all ingredient discs and then each tested and for each drink name instance for correct triggers
-  * Result: All overlays working effectively and triggering the relevant functions within javascript
-  * Action: None
+  * **Expected:** The ingredient name should appear as an overlay on the ingredient disc when hovered over and cause an action when clicked - either trigger the coffee cup image to change if it is correct, or if it is an incorrect guess it should trigger a try again message
+  * **Tested:** Rolled mouse over all ingredient discs and then each tested and for each drink name instance for correct triggers
+  * **Result:** All overlays working effectively and triggering the relevant functions within javascript
+  * **Action:** None
 
 * 'How to play' button
-  * Expected: Bring up the Coffee Menu game instructions pop-up and pause the timer, the when 'Close' button clicked the pop-up should close and the timer restart
-  * Tested: Click on the button during game play
-  * Result: The pop-up appears but the timer continued to run
-  * Action: I had to look into rewriting my code for the timer to include pause functionality using true and false states to stop and start the timer with the button clicks (explained in more detail below [Timer Issues](#timer-issues))
+  * **Expected:** Bring up the Coffee Menu game instructions pop-up and pause the timer, the when 'Close' button clicked the pop-up should close and the timer restart
+  * **Tested:** Click on the button during game play
+  * **Result:** The pop-up appears but the timer continued to run
+  * **Action:** I had to look into rewriting my code for the timer to include pause functionality using true and false states to stop and start the timer with the button clicks (explained in more detail below [Timer Issues](#timer-issues))
 
 * 'Reset game' button
-  * Expected: The page will reload
-  * Tested: Clicked on the 'Reset Game' button during game play
-  * Result: The page reloaded
-  * Action: None
+  * **Expected:** The page will reload
+  * **Tested:** Clicked on the 'Reset Game' button during game play
+  * **Result:** The page reloaded
+  * **Action:** None
 
 * 'Submit' button for email form
-  * Expected: To only submit if all fields have been filled in correctly
-  * Tested: Left each field blank or invalid and then clicking the 'Submit' button
-  * Result: Form preventing from submitting and the user prompted through messages to not leave fields blank and to include '@' in the email field
-  * Action: None
+  * **Expected:** To only submit if all fields have been filled in correctly
+  * **Tested:** Left each field blank or invalid and then clicking the 'Submit' button
+  * **Result:** Form preventing from submitting and the user prompted through messages to not leave fields blank and to include '@' in the email field
+  * **Action:** None
 
 I wanted to check my 404 page worked correctly:
 
 * Incorrect URL test
-  * Expected: The 404 page to be called to redirect the user to the correct URL for the home page
-  * Tested: Put random characters in the URL
-  * Result: The 404 page was called successfully and the link back to the home page on that page worked effectively
-  * Action: None
+  * **Expected:** The 404 page to be called to redirect the user to the correct URL for the home page
+  * **Tested:** Put random characters in the URL
+  * **Result:** The 404 page was called successfully and the link back to the home page on that page worked effectively
+  * **Action:** None
 
 I then regularly tested responsiveness:
 
 * Desktop responsiveness
-  * Expected: All text and visuals to be clearly visible, no overhanging off the page
-  * Tested: Tested on my laptop screen as well as larger external monitor
-  * Result: Everything fluidly increased/decreased in size for the screen responsively. All readable and useable
-  * Action: None
+  * **Expected:** All text and visuals to be clearly visible, no overhanging off the page
+  * **Tested:** Tested on my laptop screen as well as larger external monitor
+  * **Result:** Everything fluidly increased/decreased in size for the screen responsively. All readable and useable
+  * **Action:** None
 
 * Tablet responsiveness
-  * Expected: All text and visuals to be clearly visible, no overhanging off the page, overlays to appear when clicked
-  * Tested: Interacted with the site on my tablet as well as in chrome developer tools in tablet sizes
-  * Result: All visible and clear, overlays on ingredients appearing when clicked. The footer overhanging the initial instructions pop-up
-  * Action: The footer CSS to be updated to reduce the size of the text inside using a media query, as well as removing an unnecessary line of text in the instructions pop up that said 'How to Play' and this reduced the pop-up's height.
+  * **Expected:** All text and visuals to be clearly visible, no overhanging off the page, overlays to appear when clicked
+  * **Tested:** Interacted with the site on my tablet as well as in chrome developer tools in tablet sizes
+  * **Result:** All visible and clear, overlays on ingredients appearing when clicked. The footer overhanging the initial instructions pop-up
+  * **Action:** The footer CSS to be updated to reduce the size of the text inside using a media query, as well as removing an unnecessary line of text in the instructions pop up that said 'How to Play' and this reduced the pop-up's height.
 
 * Mobile responsiveness
-  * Expected: All text and visuals to be clearly visible, no overhanging off the page, overlays to appear when clicked
-  * Tested: Interacted with the site on my tablet as well as in chrome developer tools in tablet sizes
-  * Result: All visible and clear, overlays on ingredients appearing when clicked. The footer overhanging the initial instructions pop-up. Some of the text too big for all the content to fit on the screen.
-  * Action: The footer CSS to be updated to reduce the size of the text inside, as well as removing an unnecessary line of text in the instructions pop up that said 'How to Play' and this reduced the pop-up's height. Edited some font sizes in media queries to make text fit better in the window.
+  * **Expected:** All text and visuals to be clearly visible, no overhanging off the page, overlays to appear when clicked
+  * **Tested:** Interacted with the site on my tablet as well as in chrome developer tools in tablet sizes
+  * **Result:** All visible and clear, overlays on ingredients appearing when clicked. The footer overhanging the initial instructions pop-up. Some of the text too big for all the content to fit on the screen.
+  * **Action:** The footer CSS to be updated to reduce the size of the text inside, as well as removing an unnecessary line of text in the instructions pop up that said 'How to Play' and this reduced the pop-up's height. Edited some font sizes in media queries to make text fit better in the window.
 
 Here are the bugs I encountered and fixed as I went through the development and implementation of my site:
 
@@ -433,9 +433,9 @@ I ran all three of my Javascript files through this JS Hint validator.
 The validator came back highlighting some unnecessary semicolons as well as a couple of variables not being used, which I took out and cleaned up so it now returns no warnings.
 
 ![JS Hint email JS file performance after](assets/readme-images/email-js-hint.png)
-The validator came back clean apart from mentioning an unused variable and an undefined variable, but this is because they are declared/ used within the html code.
+The validator came back clean apart from mentioning an unused variable and an undefined variable for the send-email.js code, but this is because they are declared/used within the html code.
 
-The modal pop-up file came back with no errors or warnings.
+The modal-pop-up.js came back with no errors or warnings.
 
 
 # Deployment
