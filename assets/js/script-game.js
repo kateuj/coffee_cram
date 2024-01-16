@@ -118,7 +118,7 @@ function openPopUpTime() {
     });
     } else {
         document.getElementById('modal-inner').innerHTML = `<h2>You've run out of time!</h2>
-    <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
+    <p>You scored: <strong>${playerScore}</strong> <br>You got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
     <button id='close-modal-pop'>Play again?</button>`;
     $('#close-modal-pop').click(function () {
         location.reload();
@@ -138,7 +138,7 @@ function endGame() {
         });
         } else {
             document.getElementById('modal-inner').innerHTML = `<h2>Game over!</h2>
-        <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
+        <p>You scored: <strong>${playerScore}</strong> <br>You got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
         <button id='close-modal-pop'>Play again?</button>`;
         $('#close-modal-pop').click(function () {
             location.reload();
@@ -167,7 +167,7 @@ function playerWin() {
             $('#timer').text('End');
             modalPop.classList.add('open');
             document.getElementById('modal-inner').innerHTML = `<h2>Well done!</h2>
-            <p>You have completed the game!<br>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct:<br><strong>${correctDrinkNames.join(', ')}</strong></p>
+            <p>You have completed the game!<br>You scored: <strong>${playerScore}</strong> <br>You got the following answers correct:<br><strong>${correctDrinkNames.join(', ')}</strong></p>
             <button id='close-modal-pop'>Play again?</button>`;
             $('#close-modal-pop').click(function () {
                 location.reload();
@@ -189,7 +189,6 @@ function tryAgain() {
     setTimeout(function () {
         openPopUpTry();
         userString = '';
-        time = 16;
         decreasePlayerScore();
         numberOfTries++;
     }, 1000);
