@@ -33,8 +33,23 @@ Broadly, the game is aimed at anyone with an interest in coffee, which could inc
 
 #### User Stories
 1. User interested in coffee wants seeks coffee content based entertainment.
+![Home page screenshot](assets/readme-images/home-page-screenshot.png)
+The user gets a quick overview of the ingredients required for drinks before they can go quickly into their game play for entertainment. They can also refer back to the coffee menu if required, with the 'How To Play' button.
+
 2. A barista trainee wanting to test their drink making knowledge.
+![Home page screenshot](assets/readme-images/home-page-screenshot.png)
+The user can refresh their memories of ingredient combinations or choose to just go straight into the game by closing the instructions window to test their knowledge from what they know already.
+They can also refer back to the coffee menu if required, with the 'How To Play' button.
+![End of game pop-up screenshot](assets/readme-images/pop-up-with-finished-game.png)
+The game will show the user at the end of the game what drinks they got right, so they know what to focus on in future revision time.
+![Get in touch screenshot](assets/readme-images/contact-page.png)
+They may also follow the call to action to get more information on barista training and submit a Get in touch form on the contact page.
+![Thank you re-direct page screenshot](assets/readme-images/thank-you-page.png)
+Once submitted, they are directed to a thank you page to confirm their message has been submitted and then redirected straight back to the game page in 5 seconds without them having to click anything, to make their user experience as straight forward as possible.
+
 3. A barista trainer uses the game as a tool to test their trainees' knowledge.
+![Home page mobile screenshot](assets/readme-images/mobile-home-page.png)
+A barista trainer would get users to open the page on their phones collectively to access the game as a quick and fun ice breaker before commencing a practical course. The mobile view makes it easy for the site to be accessed anywhere.
 
 ### Site Objectives
 
@@ -58,7 +73,6 @@ Broadly, the game is aimed at anyone with an interest in coffee, which could inc
 * The game design will be consistent and visually engaging for the users.
 
 ![Information Flow of the site](assets/readme-images/information-flow.png)
-
 
 ### Research
 
@@ -216,7 +230,9 @@ I made a point of keeping my game code separate from the email JS code and the m
 ![Contact Form screenshot](assets/readme-images/contact-form.png)
 
 * All inputs are required
-* The contact form checks the information is suitable before sending - the email input will not work with text, an email address must be added for the form to submit.
+* The contact form checks the input is valid before sending and if not it will alert the user - the email input will not work unless a proper email address is added, and you cannot leave any field blank.
+
+![Contact Form pop up screenshot](assets/readme-images/invalid-input-error-email-form.png)
 
 ## Thank you page
 
@@ -237,6 +253,8 @@ I made a point of keeping my game code separate from the email JS code and the m
 * More drink variations
 
 # Testing
+
+When looking to approach testing for this project, I considered when is best to use automated testing and manual testing. To my understanding, I know that automated testing is useful for scenarios when the test cases are time-consuming for humans, or the tests are repeated several times over time. Manual testing is more suitable for cases when test cases only need to be run once or twice. So in this instance with this project, manual testing is best suited due to the fact the tests I will perform through development and implementation, will be simple, small tests run once or twice.
 
 ## Testing during Development
 
@@ -267,10 +285,10 @@ Here are some bugs I encountered and fixed as I went through the creation of my 
   * After troubleshooting I rewrote my code so that each increase in points was written in a separate function and then called within the playerWin function, which allowed it to start the function when the playerWin function is triggered, whereas before it was not being triggered by anything.
 
 * **Timer issues**
-  * I had a lot of issues getting the timer to function the way I wanted it to.
-  * *It would not refresh to full 15 seconds when a pop-up was closed*
-  * *It would run twice as fast if the user clicked on the 'how to play' button during game play and returned to the game*
-  * *The timer would start before the user clicks off the first pop-up*
+  * I had a lot of issues getting the timer to function the way I wanted it to:
+    * It would not refresh to full 15 seconds when a pop-up was closed
+    * It would run twice as fast if the user clicked on the 'how to play' button during game play and returned to the game*
+    * The timer would start before the user clicks off the first pop-up
 
     ![Old timer code](assets/readme-images/old-timer-function-code.png)
 
@@ -389,7 +407,7 @@ Here is the live link to my website - <https://kateuj.github.io/coffee_cram/inde
 
 # Languages
 
-* I used HTML, CSS and Javascript to create this site.
+* I used HTML, CSS, Javascript and JQuery to create this site.
 * Bootstrap v5.3.2 was used and built upon for creating the general layout with its grid system.
 
 # Media Queries
@@ -417,7 +435,6 @@ Here is the live link to my website - <https://kateuj.github.io/coffee_cram/inde
 * **Footer** - code is based on the code used in the 'Love Running' exercise of Code Institute.
 
 * **Thank-you page** - I used this code snippet to get the Thank You page to re-direct back to the site after 5 seconds. This was from a [Stack Overflow thread.](https://stackoverflow.com/questions/3292038/redirect-website-after-specified-amount-of-time)
-
 ![Re-direct for the thank you page code snippet](assets/readme-images/redirect-code-snippet.png)
 
 * **Favicon** - I used a [Favicon generator](https://favicon.io/) to create the appropriate files for me to upload to my site, as well as this code snippet to install it site-wide.
@@ -440,5 +457,5 @@ Here is the live link to my website - <https://kateuj.github.io/coffee_cram/inde
 
 * Martina Terlevic my CI mentor, for her invaluable advice.
 * [Kera Cudmore](https://github.com/kera-cudmore/readme-examples/blob/main/README.md#italic-bold-and-code) for showing how to form a README file.
-* Liz Curtis my friend and fellow coder, for listening and offering suggestions when I was brainstorming logic and troubleshooting solutions.
+* Liz Curtis my friend and fellow coder, for patiently listening, giving encouragement and brainstorming with me when I was troubleshooting.
 * The big and little human beings of the Ulloa-James household who have been very patient with me, allowing me the time day or night to get my coding done.
