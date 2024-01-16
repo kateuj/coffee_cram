@@ -67,24 +67,28 @@ function decreasePlayerScore() {
     $('#player-score').text(`${playerScore}`);
 };
 
+let output = $('#timer');
+let isPaused = true;
+let time = 16;
+let timer = setInterval(function() {
+    if(!isPaused) {
+        time--;
+        output.text(time);
+        if (time == 0) {
+            openPopUpTime();
+            clearInterval(timer);
+        }; 
+    };
+}, 1000);
+
 // Pause timer when user clicks on 'how to play' button to view coffee menu
-$('#openModal').click(function () {
-    $('#timer').text(`Paused...`);
+$('#openModal').click (function () {
+    isPaused = true;
 });
 
 // Timer function to start when the user clicks off the first pop-up
-$('#closeModal').click(function () {
-    // Timer countdown for each question
-    $('#timer').text(`15`);
-    setInterval(function () {
-        let div = document.querySelector('#timer');
-        let count = div.textContent * 1 - 1;
-        div.textContent = count;
-        if (count <= 0) {
-            $('#timer').text(` `);
-            openPopUpTime();
-        };
-    }, 1000);
+$('#closeModal').click (function () {
+    isPaused = false;
 });
 
 // Pop-up messages
@@ -97,7 +101,7 @@ function openPopUpTry() {
     <p>Try another ingredient. <br>
     Check the menu again if you need to!</p>`;
     setTimeout(function () {
-        $('#timer').text(`15`);
+        time = 16;
         modalPop.classList.remove('open');
     }, 2000);
 };
@@ -122,6 +126,7 @@ function openPopUpTime() {
     }
 };
 
+//Pop-up if the user gets too many wrong answers
 function endGame() {
     modalPop.classList.add('open');
     if (correctDrinkNames.length === 0) {
@@ -133,18 +138,6 @@ function endGame() {
         });
         } else {
             document.getElementById('modal-inner').innerHTML = `<h2>Game over!</h2>
-        <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
-        <button id='close-modal-pop'>Play again?</button>`;
-        $('#close-modal-pop').click(function () {
-            location.reload();
-        });
-    };
-};
-
-function endGameComplete() {
-    modalPop.classList.add('open');
-    if (correctDrinkNames.length === 6) {
-        document.getElementById('modal-inner').innerHTML = `<h2>Well done!</h2>
         <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
         <button id='close-modal-pop'>Play again?</button>`;
         $('#close-modal-pop').click(function () {
@@ -183,7 +176,7 @@ function playerWin() {
         drinkName = getDrinkName();
         $('#drink-random').text(`${drinkName}`);
         openPopUpWellDone();
-        $('#timer').text(`15`);
+        time = 16;
         }
     }, 1000);
     setTimeout( function () {
@@ -196,7 +189,7 @@ function tryAgain() {
     setTimeout(function () {
         openPopUpTry();
         userString = '';
-        $('#timer').text(`15`);
+        time = 16;
         decreasePlayerScore();
         numberOfTries++;
     }, 1000);
