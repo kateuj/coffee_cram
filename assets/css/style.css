@@ -223,6 +223,7 @@ a:hover {
 /*Footer*/
 footer {
     background-color: #a42373;
+
 }
 
 .social-networks {
@@ -238,7 +239,7 @@ footer {
 }
 
 .social-networks i {
-    padding: 2%;
+    padding: 1.5%;
     color: #fff;
 }
 
@@ -339,15 +340,19 @@ footer {
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     p {
         font-size: 1rem;
     }
 
-    footer {
+    .social-networks li {
         font-size: 0.8rem;
+    }
+    
+    .social-networks i {
+        padding: 2.5%;
     }
 
     .progress-measure {
