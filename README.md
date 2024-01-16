@@ -257,12 +257,33 @@ Here are some bugs I encountered and fixed as I went through the creation of my 
   * Initially I had used "location.reload()" to reset the drink name section at the top of the page, which refreshed the page, meaning my score and order counters were not going up in score as they kept resetting with the page refresh.
   * To fix, I created a separate function to get the randomized drink from the array, that is called through the variable "drinkName". Then, when it is called through the "playerWin()" function, it calls another drink without refreshing the page.
 
+* **Random drink sometimes showing same drink twice in game play**
+  * I put in a while loop that would check the new randomized drink against the previous correctly guessed drinks array (these were each added as an to a separate array once completed) to make sure it did not display the same drink twice. If it was the same, it re-ran the randomiser until it wasn't the same.
+
+  ![While loop for random drink generator](assets/readme-images/while-loop.png)
+
 * **Order count and Score count**
   * Initially I tried out different code to get the order count and score count to increase with each correct answer but it did not work initially.
-  * After troubleshooting I rewrote my code so that each increase in points was written in a separate function and then called within the playerWin function, which allowed it to start the function when the playerWin function is triggered.
+  * After troubleshooting I rewrote my code so that each increase in points was written in a separate function and then called within the playerWin function, which allowed it to start the function when the playerWin function is triggered, whereas before it was not being triggered by anything.
 
-* **Timer starting before the user clicks off the first pop-up**
-  * I had to put the timer into a click function for the "Close" button
+* **Timer issues**
+  * I had a lot of issues getting the timer to function the way I wanted it to.
+  * *It would not refresh to full 15 seconds when a pop-up was closed*
+  * *It would run twice as fast if the user clicked on the 'how to play' button during game play and returned to the game*
+  * *The timer would start before the user clicks off the first pop-up*
+
+    ![Old timer code](assets/readme-images/old-timer-function-code.png)
+
+  * I decided I needed to look at a completely different way of creating a timer function so did some research on google, looking for pause functions. I found an example where someone had used true and false statements to change the state of the timer function with an if statement to stop and start the timer with the click of certain button (Please see link to this reference in the [Code](#code) section below).
+  * With this concept in mind, I recreated my code (see below) and changed the state between true and false within the pop-up button and the how to play button. So the state when the page loads is 'true' so the timer won't start until the 'close' button is pressed and the state is changed to 'false'.
+  * This meant that the setInterval function that was in my old code, did not have chance to start twice and inturn double the speed of the count down of the timer.
+  * After this, I then changed the value of the 'time' variable to 16 wherever I wanted the timer to start counting down again (I found when I used the value 15, it was showing as 14 straight away as it counted down from 15 immediately, so I decided on using 16 to rectify this.)
+
+  ![New timer code](assets/readme-images/new-timer-function-code.png)
+  
+  * I also found that I needed to move the 'time' value change into its own setTimeOut function after the pop-up state change, as it was originally in the same setTimeOut function and was starting to count down well before the pop-up had disappeared.
+
+  ![Refresh timer code](assets/readme-images/refresh-timer-code.png)
 
 * **Buttons in pop-ups not working**
   * The button to "Play Again" at the end of a game were not working see code snippet below:
@@ -278,15 +299,6 @@ Here are some bugs I encountered and fixed as I went through the creation of my 
 
 ### Testing the Thank you page
 * Successfully re-directs back to site after 5 seconds when tested.
-
-### Unfixed bug
-* The only bug I could not fix, was that when in Gameplay, if the user clicks on the "How to play" button to view the Coffee Menu again, when they click off, the countdown timer appears to go twice as fast. It is something I intend to look into and fix in the future.
-
-make sure the same drink doesnt appear twice in a row
-make into arrays rather than strings for better code
-timer going off before pop up closes move time = 16 into its own time out function
-
-https://stackoverflow.com/questions/21277900/how-can-i-pause-setinterval-functions
 
 ## Validator Testing
 
@@ -408,6 +420,8 @@ Here is the live link to my website - <https://kateuj.github.io/coffee_cram/inde
 
 * **Favicon** - I used a [Favicon generator](https://favicon.io/) to create the appropriate files for me to upload to my site, as well as this code snippet to install it site-wide.
 ![Favicon installation code snippet](assets/readme-images/favicon-code-snippet.png)
+
+* **Timer** - I found this code snippet and edited it to suit my site's needs to make my timer function effectively. [Pause setInterval function](https://stackoverflow.com/questions/21277900/how-can-i-pause-setinterval-functions)
 
 # Credits
 
