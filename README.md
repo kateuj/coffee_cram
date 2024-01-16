@@ -115,6 +115,10 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 
 ![Typefaces used](assets/readme-images/fonts.png)
 
+### Javascript coding approach
+
+I made a point of keeping my game code separate from the email JS code and the modal pop-up code, to improve usability of the code for future coding users. With this in mind, I have commented on each function to provide explanation of each to make my code and thought process as clear as possible to future viewers. I have also used a mixture of plain Javascript and Jquery to demonstrate my knowledge.
+
 # Features #
 
 ## Existing Features
@@ -149,7 +153,7 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 ![Drink title generator screenshot](assets/readme-images/random-drink-generator.png)
 
 * This title prints a random drink from an array in the script-game.js file.
-* I would like to iterate this code to get it to a stage where it will stop the same drink appearing twice consecutively. 
+* I have used a while loop to make sure no drink appears twice during one game. The loop checks the users correct drink answers array against the original drink name array. This user array has also been useful to then print out the drinks the user got correct in a pop up at the end of game play, to help them know where to focus on next time to improve their score.
 
 ![Javascript code for drink name generator screenshot](assets/readme-images/drink-name-random-code.png)
 
@@ -182,6 +186,17 @@ I chose a retro pixelated style font for headings and the logo for the game to a
 ![Well done pop-up screenshot](assets/readme-images/well-done-pop-up.png)
 
 * A well done pop-up appears for every correct sequence completed so the user knows the game has progressed and they are moving onto the next drink.
+
+### End of game pop-up / Out of time pop-up
+
+![End of game pop-up screenshot](assets/readme-images/pop-up-with-score.png)
+
+* Conscious I wanted to make this as intuitive as possible for giving the user feedback as this is can be used as a training tool, I have created logic that tailors the pop-up message based on if they answer any questions correctly, if time ran out, or if they completed the game.
+* The user array I created to use in the while loop for the random drink generator (to make sure no drink appears twice during one game) allows me to print out the drinks the user got correct in a pop up at the end of game play, to help them know where to focus on next time to improve their score.
+
+![End of game pop-up no drinks correct screenshot](assets/readme-images/pop-up-with-no-score.png)
+
+![End of game pop-up all drinks correct screenshot](assets/readme-images/pop-up-with-finished-game.png)
 
 ### Footer
 
@@ -267,6 +282,12 @@ Here are some bugs I encountered and fixed as I went through the creation of my 
 ### Unfixed bug
 * The only bug I could not fix, was that when in Gameplay, if the user clicks on the "How to play" button to view the Coffee Menu again, when they click off, the countdown timer appears to go twice as fast. It is something I intend to look into and fix in the future.
 
+make sure the same drink doesnt appear twice in a row
+make into arrays rather than strings for better code
+timer going off before pop up closes move time = 16 into its own time out function
+
+https://stackoverflow.com/questions/21277900/how-can-i-pause-setinterval-functions
+
 ## Validator Testing
 
 ### W3C Validator
@@ -309,6 +330,16 @@ The performance came out as:
 * Performance on mobile could still be improved by reducing image sizes, but this is difficult to do when the images need to be large enough for larger screens in this particular instance.
 
 ## JS Hint Testing
+I ran all three of my Javascript files through this JS Hint validator. 
+
+![JS Hint game JS file performance after](assets/readme-images/jshint-warnings.png)
+The validator came back highlighting some unnecessary semicolons as well as a couple of variables not being used, which I took out and cleaned up so it now returns no warnings.
+
+![JS Hint email JS file performance after](assets/readme-images/email-js-hint.png)
+The validator came back clean apart from mentioning an unused variable and an undefined variable, but this is because they are declared/ used within the html code.
+
+The modal pop-up file came back with no errors or warnings.
+
 
 # Deployment
 
