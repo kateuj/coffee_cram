@@ -3,7 +3,7 @@ const drinkNames = ['Mocha', 'Latte', 'Americano', 'Flat White', 'Single Espress
 const correctDrinkNames = [];
 let drinkName = getDrinkName();
 
-//while loop
+// While loop to check that the user does not get the same drink twice 
 function getDrinkName() {
     let newDrink = drinkNames[Math.floor(Math.random() * drinkNames.length)];
     while (correctDrinkNames.includes(newDrink)) {
@@ -12,6 +12,7 @@ function getDrinkName() {
     return newDrink;
 };
 
+// Prints the randomized drink name within the 'drink-random' div on the index page
 $(document).ready(function () {
     $('#drink-random').text(`${drinkName}`);
 });
