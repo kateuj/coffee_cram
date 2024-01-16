@@ -32,10 +32,14 @@ let mocha = 'double espresso, chocolate, milk';
 let flatWhite = 'double espresso, milk';
 let cappuccino = 'espresso, milk, foam';
 
-// Empty string generated for user ingredient clicks to make an ingredient list to check against the variable strings of each drink's mock up.
+/*  Empty string generated for user ingredient clicks to make an ingredient list 
+    to check against the variable strings of each drink's mock up.
+*/
 let userString = '';
 
-//Checks number of incorrect answers so that the game ends if the user gets more than 3 incorrect ingredient clicks.
+/*  Checks number of incorrect answers so that the game ends if the user gets more 
+    than 3 incorrect ingredient clicks.
+*/
 let numberOfTries = 0;
 function checkTries() {
     if (numberOfTries >= 3) {
@@ -45,7 +49,7 @@ function checkTries() {
     }
 }
 
-// Progress counts - Score and Order counts
+// Progress counts - Score and Order counts and functions
 let playerScore = 0;
 let orderCount = 0;
 
@@ -64,7 +68,9 @@ function decreasePlayerScore() {
     $('#player-score').text(`${playerScore}`);
 }
 
+// Timer function
 let output = $('#timer');
+//Below variable set to true initially so the timer does not start straight away
 let isPaused = true;
 let time = 16;
 let timer = setInterval(function () {
@@ -91,7 +97,7 @@ $('#closeModal').click(function () {
 // Pop-up messages
 const modalPop = document.getElementById('modal-pop');
 
-// Try again pop-up
+// Try again pop-up if incorrect ingredient clicked
 function openPopUpTry() {
     modalPop.classList.add('open');
     document.getElementById('modal-inner').innerHTML = `<h2>Oops!</h2>
@@ -106,7 +112,7 @@ function openPopUpTry() {
     
 }
 
-// Run out of time pop-up
+// Run out of time pop-up with text variations depending on user performance
 function openPopUpTime() {
     modalPop.classList.add('open');
     if (correctDrinkNames.length === 0) {
@@ -126,7 +132,7 @@ function openPopUpTime() {
     }
 }
 
-//Pop-up if the user gets too many wrong answers
+//Pop-up if the user gets too many wrong answers with variations depending on user performance
 function endGame() {
     modalPop.classList.add('open');
     if (correctDrinkNames.length === 0) {
@@ -159,7 +165,10 @@ function openPopUpWellDone() {
     }, 1000);
 }
 
-//If player gets correct answer, runs below function
+/*  If player gets correct answer, runs below function
+    this function also checks if the player has completed
+    the game by completing all 7 drinks successfully 
+*/
 function playerWin() {
     setTimeout(function () {
         increasePlayerScore();
@@ -197,8 +206,11 @@ function tryAgain() {
     $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
 }
 
-// Click functions with if statements for each ingredient in the drawer. Each triggers the coffee cup image to change to reflect the user's choices or resets the level for incorrect answers.
-$(espresso).click(function () {
+/*  Click functions with if statements for each ingredient in the drawer.
+    Each triggers the coffee cup image to change to reflect the user's 
+    choices or resets the level for incorrect answers.
+*/
+    $(espresso).click(function () {
     userString += 'espresso';
     if (drinkName == 'Single Espresso' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/single-espresso-cup.webp');
