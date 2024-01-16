@@ -1,5 +1,5 @@
-const openBtn = document.getElementById("openModal");
-const closeBtn = document.getElementById("closeModal");
+const openBtn = document.getElementById("open-modal");
+const closeBtn = document.getElementById("close-modal");
 const modal = document.getElementById("modal");
 
 window.onload = function() {
