@@ -98,9 +98,12 @@ function openPopUpTry() {
     <p>Try another ingredient. <br>
     Check the menu again if you need to!</p>`;
     setTimeout(function () {
-        time = 16;
         modalPop.classList.remove('open');
     }, 2000);
+    setTimeout(function () {
+        time = 16;
+    }, 1000);
+    
 }
 
 // Run out of time pop-up
@@ -108,15 +111,15 @@ function openPopUpTime() {
     modalPop.classList.add('open');
     if (correctDrinkNames.length === 0) {
         document.getElementById('modal-inner').innerHTML = `<h2>You've run out of time!</h2>
-    <p>You did not get any answers correct but maybe next time!</p>
-    <button id='close-modal-pop'>Play again?</button>`;
+        <p>You did not get any answers correct but maybe next time!</p>
+        <button id='close-modal-pop'>Play again?</button>`;
         $('#close-modal-pop').click(function () {
             location.reload();
         });
     } else {
         document.getElementById('modal-inner').innerHTML = `<h2>You've run out of time!</h2>
-    <p>You scored: <strong>${playerScore}</strong> <br>You got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
-    <button id='close-modal-pop'>Play again?</button>`;
+        <p>You scored: <strong>${playerScore}</strong> <br>You got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
+        <button id='close-modal-pop'>Play again?</button>`;
         $('#close-modal-pop').click(function () {
             location.reload();
         });
@@ -151,6 +154,9 @@ function openPopUpWellDone() {
     setTimeout(function () {
         modalPop.classList.remove('open');
     }, 1500);
+    setTimeout(function () {
+        time = 16;
+    }, 1000);
 }
 
 //If player gets correct answer, runs below function
@@ -173,7 +179,6 @@ function playerWin() {
             drinkName = getDrinkName();
             $('#drink-random').text(`${drinkName}`);
             openPopUpWellDone();
-            time = 16;
         }
     }, 1000);
     setTimeout(function () {
