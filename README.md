@@ -297,6 +297,8 @@ Here are some bugs I encountered and fixed as I went through the creation of my 
   * Upon further inspection, I realised I needed to add parameters for each input into the JS file, which I had not been able to follow clearly in the Code Institute tutorial, but found the solution while looking at the emailJS tutorials on their site to resolve. 
 ![Send mail code](assets/readme-images/send-mail-code.png)
 
+![Send mail success](assets/readme-images/emailjs-success.png)
+
 ### Testing the Thank you page
 * Successfully re-directs back to site after 5 seconds when tested.
 
