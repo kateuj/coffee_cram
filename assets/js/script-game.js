@@ -35,13 +35,22 @@ let cappuccino = 'espresso, milk, foam';
 // Empty string generated for user ingredient clicks to make an ingredient list to check against the variable strings of each drink's mock up.
 let userString = '';
 
+//Checks number of incorrect answers so that the game ends if the user gets more than 3 incorrect ingredient clicks.
+let numberOfTries= 0;
+function checkTries() {
+if (numberOfTries >= 3 ) {
+    endGame();
+} else {
+    tryAgain();
+};
+};
+
 // Progress counts - Score and Order counts
 let divScore = document.querySelector('#player-score');
 let divOrderCount = document.querySelector('#order-count');
 
 let playerScore = 0;
 let orderCount = 0;
-let timeRunOut = 0;
 
 function increasePlayerScore() {
     playerScore += 10;
@@ -96,12 +105,52 @@ function openPopUpTry() {
 // Run out of time pop-up
 function openPopUpTime() {
     modalPop.classList.add('open');
+    if (correctDrinkNames.length === 0) {
     document.getElementById('modal-inner').innerHTML = `<h2>You've run out of time!</h2>
-    <p>You scored: ${playerScore} and got the following answers correct ${correctDrinkNames.join(', ')}</p>
+    <p>You did not get any answers correct but maybe next time!</p>
     <button id='close-modal-pop'>Play again?</button>`;
     $('#close-modal-pop').click(function () {
         location.reload();
     });
+    } else {
+        document.getElementById('modal-inner').innerHTML = `<h2>You've run out of time!</h2>
+    <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
+    <button id='close-modal-pop'>Play again?</button>`;
+    $('#close-modal-pop').click(function () {
+        location.reload();
+    });
+    }
+};
+
+function endGame() {
+    modalPop.classList.add('open');
+    if (correctDrinkNames.length === 0) {
+        document.getElementById('modal-inner').innerHTML = `<h2>Game over!</h2>
+        <p>You did not get any answers correct but maybe next time!</p>
+        <button id='close-modal-pop'>Play again?</button>`;
+        $('#close-modal-pop').click(function () {
+            location.reload();
+        });
+        } else {
+            document.getElementById('modal-inner').innerHTML = `<h2>Game over!</h2>
+        <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
+        <button id='close-modal-pop'>Play again?</button>`;
+        $('#close-modal-pop').click(function () {
+            location.reload();
+        });
+    };
+};
+
+function endGameComplete() {
+    modalPop.classList.add('open');
+    if (correctDrinkNames.length === 6) {
+        document.getElementById('modal-inner').innerHTML = `<h2>Well done!</h2>
+        <p>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct: <strong>${correctDrinkNames.join(', ')}</strong></p>
+        <button id='close-modal-pop'>Play again?</button>`;
+        $('#close-modal-pop').click(function () {
+            location.reload();
+        });
+    };
 };
 
 // Correct answer pop-up
@@ -119,13 +168,27 @@ function playerWin() {
     setTimeout(function () {
         increasePlayerScore();
         increaseOrderCount();
-        openPopUpWellDone();
         userString = '';
         correctDrinkNames.push(drinkName);
+        if (correctDrinkNames.length === 7) {
+            $('#timer').text('End');
+            modalPop.classList.add('open');
+            document.getElementById('modal-inner').innerHTML = `<h2>Well done!</h2>
+            <p>You have completed the game!<br>You scored: <strong>${playerScore}</strong> <br>and got the following answers correct:<br><strong>${correctDrinkNames.join(', ')}</strong></p>
+            <button id='close-modal-pop'>Play again?</button>`;
+            $('#close-modal-pop').click(function () {
+                location.reload();
+            });
+        } else {
         drinkName = getDrinkName();
         $('#drink-random').text(`${drinkName}`);
+        openPopUpWellDone();
         $('#timer').text(`15`);
+        }
     }, 1000);
+    setTimeout( function () {
+    $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+}, 1000);
 };
 
 //If player clicks incorrect answer, runs below function
@@ -135,12 +198,13 @@ function tryAgain() {
         userString = '';
         $('#timer').text(`15`);
         decreasePlayerScore();
+        numberOfTries++;
     }, 1000);
+    $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
 };
 
-
 // Click functions with if statements for each ingredient in the drawer. Each triggers the coffee cup image to change to reflect the user's choices or resets the level for incorrect answers.
-$(espresso).click(function () {
+$(espresso).click(function () { 
     userString += 'espresso';
     if (drinkName == 'Single Espresso' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/single-espresso-cup.webp');
@@ -148,29 +212,26 @@ $(espresso).click(function () {
     } else if (drinkName == 'Cappuccino' && userString == 'espresso') {
         $('#coffee-cup').attr('src', 'assets/images/espresso-cup.webp');
     } else {
-        tryAgain();
-        $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+        checkTries();
     };
 });
 
-$(water).click(function () {
+$(water).click(function () { 
     userString += ', water';
     if (drinkName == 'Americano' && userString == americano) {
         $('#coffee-cup').attr('src', 'assets/images/americano.webp');
         playerWin();
     } else {
-        tryAgain();
-        $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+        checkTries();
     };
 });
 
-$(chocolate).click(function () {
+$(chocolate).click(function () {  
     userString += ', chocolate';
     if (drinkName == 'Mocha' && userString == 'double espresso, chocolate') {
         $('#coffee-cup').attr('src', 'assets/images/chocolate-cup.webp');
     } else {
-        tryAgain();
-        $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+        checkTries();
     };
 });
 
@@ -188,8 +249,7 @@ $(steamedMilk).click(function () {
         $('#coffee-cup').attr('src', 'assets/images/flat-white.webp');
         playerWin();
     } else {
-        tryAgain();
-        $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+        checkTries();
     };
 });
 
@@ -207,8 +267,7 @@ $(doubleEspresso).click(function () {
         $('#coffee-cup').attr('src', 'assets/images/double-espresso-cup.webp');
         playerWin();
     } else {
-        tryAgain();
-        $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+        checkTries();
     };
 });
 
@@ -218,8 +277,7 @@ $(foam).click(function () {
         $('#coffee-cup').attr('src', 'assets/images/cappuccino.webp');
         playerWin();
     } else {
-        tryAgain();
-        $('#coffee-cup').attr('src', 'assets/images/coffee-cup.webp');
+        checkTries();
     };
 });
 
