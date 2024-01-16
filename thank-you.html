@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Coffee Cram Game">
+  <meta charset="UTF-8">
+  <meta name="description" content="Coffee Cram Game">
   <meta name="keywords" content="Coffee, Game, Quiz">
   <meta name="author" content="Kate Ulloa James">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images-favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images-favicon//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images-favicon//favicon-16x16.png">
-<link rel="manifest" href="assets/images-favicon//site.webmanifest">
-    <title>Coffee Cram Error 404</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images-favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images-favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images-favicon//favicon-16x16.png">
+  <link rel="manifest" href="assets/images-favicon//site.webmanifest">
+  <title>Coffee Cram Error 404</title>
 </head>
+
 <body>
-    <!--Title of game-->
-    <header>
-        <h1>COFFEE CRAM</h1>
-    </header>
-    
-    <div class="container-fluid max-width">
-        <section class="thank-you">
-          <div class="row">
-            <h2 class="main-header">Thanks for getting in touch.</h2>
-            <p>We'll get back to you soon!</p>
-          </div>
-        </section>
-        <div class="row">
-          <div id="counter">5</div>
-        </div>
+  <!--Title of game-->
+  <header>
+    <h1>COFFEE CRAM</h1>
+  </header>
+
+  <div class="container-fluid max-width">
+    <section class="thank-you">
+      <div class="row">
+        <h2 class="main-header">Thanks for getting in touch.</h2>
+        <p>We'll get back to you soon!</p>
       </div>
-      <script>
-        setInterval(function () {
-          var div = document.querySelector("#counter");
-          var count = div.textContent * 1 - 1;
-          div.textContent = count;
-          if (count <= 0) {
-            window.location.replace("index.html");
-          }
-        }, 1000);
+    </section>
+    <div class="row">
+      <div id="counter">5</div>
+    </div>
+  </div>
+  <script>
+    setInterval(function () {
+      var div = document.querySelector("#counter");
+      var count = div.textContent * 1 - 1;
+      div.textContent = count;
+      if (count <= 0) {
+        window.location.replace("index.html");
+      }
+    }, 1000);
 
-    </script>
+  </script>
 
-    <footer class="fixed-bottom">
-        <!--social media links-->
-        <ul class="social-networks">
-            <li>Keen to get some barista training? <a href="contact.html" target="_blank" aria-label="Link to contact form">Send us a message!</a></li>
-            <li><a href="https://www.instagram.com/katebrush_art/" target="_blank"
-                aria-label="Link to Instagram account (Opens new window)"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="contact.html" target="_blank" aria-label="Link to contact form"><i
-                class="fa-regular fa-envelope"></i></a></li>
-        </ul>
-    </footer>
+  <footer class="fixed-bottom">
+    <!--social media links-->
+    <ul class="social-networks">
+      <li>Keen to get some barista training? <a href="contact.html" target="_blank"
+          aria-label="Link to contact form">Send us a message!</a></li>
+      <li><a href="https://www.instagram.com/katebrush_art/" target="_blank"
+          aria-label="Link to Instagram account (Opens new window)"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="contact.html" target="_blank" aria-label="Link to contact form"><i
+            class="fa-regular fa-envelope"></i></a></li>
+    </ul>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="assets/js/script-game.js"></script>
-    <script src="https://kit.fontawesome.com/5588c9f8ee.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="assets/js/script-game.js"></script>
+  <script src="https://kit.fontawesome.com/5588c9f8ee.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
