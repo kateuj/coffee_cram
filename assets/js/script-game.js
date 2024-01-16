@@ -85,12 +85,12 @@ let timer = setInterval(function () {
 }, 1000);
 
 // Pause timer when user clicks on 'how to play' button to view coffee menu
-$('#openModal').click(function () {
+$('#open-modal').click(function () {
     isPaused = true;
 });
 
 // Timer function to start when the user clicks off the first pop-up
-$('#closeModal').click(function () {
+$('#close-modal').click(function () {
     isPaused = false;
 });
 
